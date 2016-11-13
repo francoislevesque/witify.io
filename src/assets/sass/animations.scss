@@ -1,0 +1,35 @@
+.slideLeft {
+	transform: translateX(-40px);
+	opacity: 0;
+	-webkit-transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+  	transition:         all 1s cubic-bezier(0.23, 1, 0.32, 1);
+
+	&.animated {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.slideRight {
+	transform: translateX(40px);
+	opacity: 0;
+	-webkit-transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+  	transition:         all 1s cubic-bezier(0.23, 1, 0.32, 1);
+
+	&.animated {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.slideUp {
+	transform: translateY(40px);
+	opacity: 0;
+	-webkit-transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+  	transition:         all 1s cubic-bezier(0.23, 1, 0.32, 1);
+
+	&.animated {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}

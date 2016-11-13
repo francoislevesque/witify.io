@@ -1,0 +1,40 @@
+footer {
+	background-color: #222;
+	color: #999;
+
+	.top {
+		padding: 70px 0;
+	}
+
+	.about, .menu {
+		h3 {
+			font-weight: 600;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-size: 0.8em;
+			margin-bottom: 20px;
+		}
+	}
+	.menu {
+		a {
+			display: block;
+			margin-bottom: 6px;
+			transition: 0.2s;
+
+			&:hover {
+				color: #777;
+			}
+		}
+	}
+
+	.rights, .author {
+		font-size: 0.9em;
+	}
+
+	.author {
+		float: right;
+		position: relative;
+		bottom: 18px;
+	}
+}

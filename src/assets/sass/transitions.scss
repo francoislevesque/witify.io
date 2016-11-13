@@ -1,0 +1,25 @@
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .5s
+}
+
+.fade-enter, .fade-leave-active {
+	opacity: 0;
+}
+
+.slideUp-enter-active, .slideUp-leave-active {
+	transition: all .5s
+}
+
+.slideUp-enter, .slideUp-leave-active {
+	opacity: 0;
+	transform: translateY(60px);
+}
+
+.scale-enter-active, .scale-leave-active {
+	transition: .9s
+}
+
+.scale-enter, .scale-leave-active {
+	transform: scale(1.2);
+	opacity: 0;
+}

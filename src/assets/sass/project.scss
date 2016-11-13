@@ -1,0 +1,58 @@
+.project {
+	width: 100%;
+	background-color: #fff;
+
+	.hero {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		background-color: #fff;
+
+		.v-center {
+			position: relative;
+		}
+		.bg {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			background-image: url('../img/projects/elium/bg.jpg');
+			background-position: center;
+			background-size: cover;
+			opacity: 1;
+			@include transition(opacity 0.3s);
+
+			&.bg-1 {
+				background-image: url('../img/projects/elium/bg.jpg');
+			}
+
+			&.bg-2 {
+				background-image: url('../img/projects/occ/bg.jpg');
+			}
+
+			&.bg-3 {
+				background-image: url('../img/projects/coupsur/bg.jpg');
+			}
+
+			&.bg-4 {
+				background-image: url('../img/projects/elium/bg.jpg');
+			}
+		}
+		.content {
+			color: #fff;
+
+			p {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.technologies {
+	margin-top: 40px;
+
+	img {
+		width: 40px;
+		margin-right: 40px;
+	}
+}

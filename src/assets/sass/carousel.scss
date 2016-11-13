@@ -1,0 +1,120 @@
+.project-carousel {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+
+	a {
+		height: 100%;
+	}
+
+	#projects {
+		height: 100%;
+		// Project slide transitions
+		@include transition(all 0.5s);
+		@include transition-timing-function(cubic-bezier(0.230, 1.000, 0.320, 1.000));
+	}
+
+	.left, .right {
+		position: fixed;
+		background-color: #fff;
+		padding: 20px;
+		cursor: pointer;
+		border-radius: 50px;
+		margin: 20px;
+		bottom: 10px;
+		@include box-shadow(0 0 8px rgba(0,0,0,0.1));
+		@include transition(transform 0.3s);
+		
+		&:hover {
+			@include scale(1.1);
+		}
+
+		img {
+			width: 20px;
+		}
+	}
+
+	.right {
+		right: 0;
+	}
+
+	.project {
+		cursor: pointer;
+		display: inline-block;
+		width: 33.33333%;
+		height: 100%;
+		position: relative;
+		background-color: #000;
+		overflow: hidden;
+		@include transition(width 0.3s);
+		
+		.bg {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-size: cover;
+			background-position: center;
+			@include transition(opacity 0.3s);
+			@include transition(transform 0.3s);
+		}
+
+		.bg-1 {
+			background-image: url('../img/projects/elium/bg.jpg');
+		}
+
+		.bg-2 {
+			background-image: url('../img/projects/occ/bg.jpg');
+		}
+
+		.bg-3 {
+			background-image: url('../img/projects/coupsur/bg.jpg');
+		}
+
+		.bg-4 {
+			background-image: url('../img/projects/elium/bg.jpg');
+		}
+		
+		.content {
+			color: #fff;
+			position: absolute;
+			bottom: 300px;
+			width: 100%;
+			padding: 0 50px;
+			padding-right: 200px;
+			@include transition(opacity 0.3s ease);
+
+			h2 {
+				font-size: 3em;
+				@include transform(translateY(54px));
+				@include transition(all 0.3s ease);
+			}
+
+			p {
+				opacity: 0;
+				color: #fff;
+				@include transform(translateY(5px));
+				@include transition(all 0.3s ease);
+			}
+
+			span {
+				color: #fff;
+			}
+		}
+
+		&:hover {
+			.bg {
+				opacity: 0.9;
+				@include scale(1.1);
+			}
+			.content {
+				p {
+					opacity: 1;
+					@include transform(translateY(0px));
+				}
+				h2 {
+					@include transform(translateY(0px));
+				}
+			}
+		}
+	}
+}

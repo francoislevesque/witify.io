@@ -1,0 +1,101 @@
+/** Wrappers **/
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	font-size: 16px;
+	overflow-x: hidden;
+	background-color: $black;
+}
+
+#app {
+	width: 100%;
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	padding-top: $navHeight;
+	min-height: 100%;
+}
+
+
+/** Sections **/
+
+.fullpage {
+	height: 100%;
+	width: 100%;
+    padding: 0; 
+}
+
+/** Page container */
+.page {
+	position: absolute;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+}
+
+.scroll_content {
+	overflow: auto;
+	height: 100%;
+}
+
+.section {
+	padding: 60px 0;
+
+	.sub-section {
+		padding: 40px 0;
+		position: relative;
+	}
+}
+
+/** Containers **/
+
+.container-xs {
+	max-width: 450px;
+}
+
+.container-sm {
+	max-width: 600px;
+}
+
+.container-md {
+	max-width: 800px;
+}
+
+.container-lg {
+	max-width: 1200px;
+}
+
+img {
+	max-width: 100%;
+}
+
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

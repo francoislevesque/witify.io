@@ -1,0 +1,39 @@
+.btn {
+	border-radius: 4px;
+	padding: 9px 37px;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 1em;
+	border: none;
+
+	&:hover, &:focus, &:active {
+		@include box-shadow(none);
+	}
+
+	&.btn-icon:before {
+		font-size: 1.1em;
+		vertical-align: middle;
+	}
+
+	&.btn-primary {
+		background-color: lighten($grey, 20);
+
+		&:hover {
+			background-color: $grey;
+		}
+	}
+
+	&.btn-success {
+
+		&:hover {
+
+		}
+	}
+
+	&.btn-danger {
+
+		&:hover {
+			
+		}
+	}
+}
