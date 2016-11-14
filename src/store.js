@@ -29,7 +29,7 @@ export default new Vuex.Store({
 			changeTitle(state, routeName)
 		},
 		animationState(state, animationState) {
-			changeTitle(state, animationState)
+			state.animationState = animationState
 		},
 		height(state, height) {
 			state.height = height

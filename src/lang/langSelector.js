@@ -2,7 +2,7 @@ import Vue from 'vue/dist/vue.js'
 import store from '../store'
 import config from '../config'
 import locales from './locales'
-
+import database from '../database'
 
 export default class langSelector {
 
@@ -36,7 +36,12 @@ export default class langSelector {
 	check() {
 		if(this.hasLang()) {
 	    	store.commit('lang', this.params.lang)
-	    	store.commit('route', this.name)
+	    	
+	    	// Check if project
+	    	if(this.name == 'project')
+		    	store.commit('route', database[this.params.project].name)
+		    else
+		    	store.commit('route', this.name)
 
 	    	// Change Document title
 	    	document.title = config.title + " | " + store.state.route.title

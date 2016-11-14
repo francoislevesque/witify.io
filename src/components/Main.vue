@@ -1,7 +1,7 @@
 <template>
 	<transition
 		mode="in-out"
-		name="scale"
+		name="fade"
 		v-on:before-enter="beforeEnter"
 	>	
 			<router-view></router-view>
@@ -17,11 +17,9 @@ export default {
 	methods: {
 		beforeEnter(el) {
 			BeforeReady()
-			//Velocity(el, { opacity: '0' })
 		},
 		enter(el, done) {
 			this.$store.commit('animationState', 'enter')
-			//Velocity(el, { opacity: '0' }, { complete: done })
 			done()
 		},
 		afterEnter(el) {
@@ -34,11 +32,9 @@ export default {
 		},
 		beforeLeave(el) {
 			this.$store.commit('animationState', 'beforeLeave')
-			//Velocity(el, { opacity: '1' })
 		},
 		leave(el, done) {
 			this.$store.commit('animationState', 'leave')
-			//Velocity(el, { opacity: '0' }, { complete: done })
 			done()
 		},
 		afterLeave(el) {

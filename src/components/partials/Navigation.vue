@@ -21,12 +21,19 @@
 	        </div>
 		</transition>
         <div class="navigation-header">
-    		<router-link :to="'/' + $route.params.lang + '/'"  class="logo box">
-    			<div class="v-center t-center">
-            		<img src="../../assets/img/logo.svg" alt="Witify Inc Logo">
+        	<div :class="{'inTransition' : inChange}" class="box title">
+    			<div id="nav_title" class="v-center t-center">
+    				<span class="content"> 
+    					<router-link v-if="isProject" :to="'/' + $route.params.lang + '/'" exact>
+    						<span class="nest">Projects</span>
+    						<img :src="require('../../assets/img/icons/right-lg.svg')" alt="Right icon"> 
+    					</router-link>
+    					
+						{{ title }}
+    				</span>
     			</div>
-            </router-link><!--
-    		--><div class="menu box" @click="toggle()">
+    		</div>
+    		<div class="menu box" @click="toggle()">
     			<div class="v-center t-center">
 	        		<div class="menu-icon" :class="{'open': active}">
 						<span></span>
@@ -35,7 +42,12 @@
 						<span></span>
 					</div>
     			</div>
-    		</div>
+    		</div><!--
+    		--><router-link :to="'/' + $route.params.lang + '/'"  class="logo box">
+    			<div class="v-center t-center">
+            		<img src="../../assets/img/logo.svg" alt="Witify Inc Logo">
+    			</div>
+            </router-link>
         </div>
         
 	</nav>
@@ -47,12 +59,18 @@
 		data() {
 			return {
 				multiLang: Config.multiLang,
-				active: false
+				active: false,
+				inChange: false,
+				title: '',
+				isProject: false
 			}
+		},
+		mounted() {
+			this.title = this.$store.state.route.title
 		},
 		watch: {
 			'$route': function (to, from) {
-				this.active = false;
+				this.active = false
 			}
 		},
 		methods: {
@@ -62,6 +80,18 @@
 			pathTo(lang) {
 				var path = this.$route.path
 				return '/' + lang + path.substring(path.substring(1).indexOf("/") + 1)
+			}
+		},
+		watch: {
+			'$store.state.route.title': function(to, from) {
+				this.inChange = true
+				this.active = false
+				var vm = this
+				setTimeout(function() {
+					vm.inChange = false
+					vm.title = to
+					vm.isProject = vm.$route.name == 'project'
+				}, 300)
 			}
 		}
 	}

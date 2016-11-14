@@ -12,6 +12,13 @@
 		// Project slide transitions
 		@include transition(all 0.5s);
 		@include transition-timing-function(cubic-bezier(0.230, 1.000, 0.320, 1.000));
+
+		&.leave {
+			.project .content {
+				@include transition(opacity 0.3s ease);
+				opacity: 0;
+			}
+		}
 	}
 
 	.left, .right {
@@ -54,24 +61,8 @@
 			width: 100%;
 			background-size: cover;
 			background-position: center;
-			@include transition(opacity 0.3s);
-			@include transition(transform 0.3s);
-		}
-
-		.bg-1 {
-			background-image: url('../img/projects/elium/bg.jpg');
-		}
-
-		.bg-2 {
-			background-image: url('../img/projects/occ/bg.jpg');
-		}
-
-		.bg-3 {
-			background-image: url('../img/projects/coupsur/bg.jpg');
-		}
-
-		.bg-4 {
-			background-image: url('../img/projects/elium/bg.jpg');
+			@include scale(1.1);
+			@include transition(opacity 0.3s, transform 0.3s);
 		}
 		
 		.content {
@@ -82,6 +73,7 @@
 			padding: 0 50px;
 			padding-right: 200px;
 			@include transition(opacity 0.3s ease);
+			text-shadow: 0 0 20px rgba(0,0,0,0.1);
 
 			h2 {
 				font-size: 3em;
@@ -104,7 +96,7 @@
 		&:hover {
 			.bg {
 				opacity: 0.9;
-				@include scale(1.1);
+				@include scale(1);
 			}
 			.content {
 				p {

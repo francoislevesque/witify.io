@@ -2,19 +2,28 @@
     <div class="page">
         <div class="project-carousel">
             <v-fullpage>
-                <div id="projects" :style="{width: 4*($store.state.width/3) + $store.state.width + 'px', transform: 'translateX(' + translation() + 'px)'}" :class="{'leave': onLeave}">
+                <div id="projects" 
+                    :class="{'leave': onLeave}"
+                    :style="{
+                        width: nProjects*($store.state.width/3) + $store.state.width + 'px',
+                        transform: 'translateX(' + translation() + 'px)'
+                    }">
                     <div class="project" 
-                        v-for="n in 4"  
-                        @click="goToProjectPage(n)"
-                        :id="'project-' + n"
-                        :style="{width: projectWidth(n) + 'px'}"
-                        :class="'color-' + n">
-                        <div class="bg" :class="'bg-' + n"></div>
+                        v-for="(project, key, index) in projects"  
+                        @click="goToProjectPage(index, key)"
+                        :id="'project-' + key"
+                        :style="{
+                            width: projectWidth(key) + 'px'
+                        }">
+                        <div class="bg" 
+                            :style="{
+                                backgroundImage: 'url(../../src/assets/img/projects/' + key + '/bg.jpg)'
+                            }"></div>
                         <div class="content">
                             <v-scroll animation="slideUp">
-                            <h2>Stimuler les ventes {{ n }}</h2>
+                            <h2>{{ $t('projects.' + key + '.title') }}</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit laudantium vero.</p>
-                            <span>Maison Neue</span>
+                            <span>{{ project.name }}</span>
                             </v-scroll>
                         </div>
                     </div>
@@ -33,6 +42,7 @@
 <script>
 
 import Velocity from 'velocity-animate'
+import database from '../../database'
 
 export default {
     mounted() {
@@ -46,18 +56,20 @@ export default {
     },
     data() {
         return {
-            firstSlide: 1,
+            firstSlide: 0,
             onLeave: 0,
+            nProjects: Object.keys(database).length,
+            projects: database
         }
     },
     methods: {
-        goToProjectPage(project_id) {
+        goToProjectPage(index, project_name) {
             
             var time = 300
-            if(this.firstSlide == project_id - 1)
+            if(this.firstSlide == index - 1)
                 time = 0
             
-            this.firstSlide = project_id - 1
+            this.firstSlide = index - 1
 
             var vm = this;
             setTimeout(function() {
@@ -66,28 +78,28 @@ export default {
 
             this.onLeave = 1
             setTimeout(function() {
-                vm.changeRoute(project_id)
+                vm.changeRoute(project_name)
             }, time)
         },
-        changeRoute(project_id) {
+        changeRoute(project_name) {
             this.$router.push({
                 name: 'project',
                 params: {
                     lang: this.$store.state.lang, 
-                    project: project_id
+                    project: project_name
                 } 
             })
         },
         next() {
-            if(this.firstSlide != 4 - 2)
+            if(this.firstSlide != this.nProjects - 3)
                 this.firstSlide = this.firstSlide + 1
         },
         previous() {
-            if(this.firstSlide != 1)
+            if(this.firstSlide != 0)
                 this.firstSlide = this.firstSlide - 1
         },
         translation() {
-            return - this.$store.state.width/3 * (this.firstSlide - 1)
+            return - this.$store.state.width/3 * (this.firstSlide)
         },
         projectWidth(project_id) {
             return this.$store.state.width/3
