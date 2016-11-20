@@ -45,7 +45,7 @@
     		</div><!--
     		--><router-link :to="'/' + $route.params.lang + '/'"  class="logo box">
     			<div class="v-center t-center">
-            		<img src="../../assets/img/logo.svg" alt="Witify Inc Logo">
+            		<img :src="require('../../assets/img/logo.svg')" alt="Witify Inc Logo">
     			</div>
             </router-link>
         </div>

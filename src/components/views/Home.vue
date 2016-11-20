@@ -17,7 +17,7 @@
                         }">
                         <div class="bg" 
                             :style="{
-                                backgroundImage: 'url(../../src/assets/img/projects/' + key + '/bg.jpg)'
+                                backgroundImage: 'url(~../../src/assets/img/projects/' + key + '/bg.jpg)'
                             }"></div>
                         <div class="content">
                             <v-scroll animation="slideUp">
