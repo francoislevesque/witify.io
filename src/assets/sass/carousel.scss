@@ -10,10 +10,19 @@
 	#projects {
 		height: 100%;
 		// Project slide transitions
-		@include transition(all 0.5s);
+		@include transition(all 0.7s);
 		@include transition-timing-function(cubic-bezier(0.230, 1.000, 0.320, 1.000));
 
 		&.leave {
+			.project {
+				opacity: 1;
+			}
+
+			.project.leaving {
+				@include transition(opacity 0.5s);
+				opacity: 0;
+			}
+
 			.project .content {
 				@include transition(opacity 0.3s ease);
 				opacity: 0;
@@ -63,6 +72,8 @@
 			background-position: center;
 			@include scale(1.1);
 			@include transition(opacity 0.3s, transform 0.3s);
+
+			@import 'bg';
 		}
 		
 		.content {

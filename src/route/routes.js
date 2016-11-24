@@ -1,6 +1,7 @@
 /** Route Components */
 import Main from '../components/Main.vue'
 import Home from '../components/views/Home.vue'
+import Projects from '../components/views/Projects.vue'
 import Project from '../components/views/Project.vue'
 
 import About from '../components/views/About.vue'
@@ -28,6 +29,11 @@ export default [
 				component: Home
 			},
 			{
+				name: 'projects',
+				path: 'projects',
+				component: Projects
+			},
+			{
 				name: 'about',
 				path: 'about', 
 				component: About
@@ -38,7 +44,7 @@ export default [
 				component: Contact
 			},
 			{
-				path: 'project/:project',
+				path: 'projects/:project',
 				component: Project,
 				children: [
 					{

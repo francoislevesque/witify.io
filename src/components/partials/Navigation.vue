@@ -7,6 +7,7 @@
 	        			<ul>
 			                <!-- Nav Links -->
 			                <li><router-link :to="'/' + $route.params.lang + '/'" exact>{{ $t("nav.home") }}</router-link></li>
+			                <li><router-link :to="'/' + $route.params.lang + '/projects'" exact>{{ $t("nav.projects") }}</router-link></li>
 			                <li><router-link :to="'/' + $route.params.lang + '/about'" exact>{{ $t("nav.about") }}</router-link></li>
 			                <li><router-link :to="'/' + $route.params.lang + '/contact'" exact>{{ $t("nav.contact") }}</router-link></li>
 							
@@ -24,7 +25,7 @@
         	<div :class="{'inTransition' : inChange}" class="box title">
     			<div id="nav_title" class="v-center t-center">
     				<span class="content"> 
-    					<router-link v-if="isProject" :to="'/' + $route.params.lang + '/'" exact>
+    					<router-link v-if="isProject" :to="'/' + $route.params.lang + '/projects'" exact>
     						<span class="nest">Projects</span>
     						<img :src="require('../../assets/img/icons/right-lg.svg')" alt="Right icon"> 
     					</router-link>

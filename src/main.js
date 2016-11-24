@@ -18,7 +18,6 @@ import store from './store'
 import Config from './config'
 
 import Resize from './events/resize'
-import Scroll from './events/scroll'
 import Ready from './events/ready'
 
 /** Set Locales */
@@ -55,11 +54,6 @@ new Vue({
 	mounted() {
 		// On first load
 		Ready(this.$route);
-
-		// On scroll
-		document.onscroll = function() {
-			Scroll()
-		}
 
 		// On resize
 		window.onresize = function() {

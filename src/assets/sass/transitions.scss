@@ -23,3 +23,12 @@
 	transform: scale(1.2);
 	opacity: 0;
 }
+
+.slideLeftRight-enter-active, .slideLeftRight-leave-active {
+	@include transition(all .5s)
+}
+
+.slideLeftRight-enter, .slideLeftRight-leave-active {
+	transform: translateY(40px);
+	opacity: 0;
+}

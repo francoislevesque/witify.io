@@ -1,5 +1,5 @@
 <template>
-	<div :class="[{'animated': animated()}, animation]">
+	<div :class="[{'animated': animated()}, animation]" style="position: relative">
 		<slot></slot>
 	</div>
 </template>
@@ -10,6 +10,7 @@
 			return {
 				elementOffset: 0,
 				elementHeight: 0,
+				firstLoad: false
 			}
 		},
 
@@ -19,11 +20,12 @@
 
 			var vm = this
 
-			// Get scroll position Attribute from the parent element 
+			// Get scroll position
 			setTimeout(function() {
-				vm.elementOffset = vm.$el.offsetTop
+				vm.elementOffset = vm.$el.offsetTop + vm.$el.offsetParent.offsetTop
 				vm.elementHeight = vm.$el.clientHeight
-			}, 100)
+				vm.firstLoad = true
+			}, 100)  // Timeout to animation on load
 			
 			// On resize
 			window.onresize = function() {
@@ -35,8 +37,11 @@
 		methods: {
 			// Check if is in viewport
 			animated() {
-				return !(this.elementOffset + this.elementHeight <= this.$store.state.scrollTop ||
-					this.elementOffset >= this.$store.state.scrollTop + this.$store.state.height)
+				return (
+					this.firstLoad &&
+					this.elementOffset + this.elementHeight >= this.$store.state.scrollTop &&
+					this.elementOffset <= this.$store.state.scrollTop + this.$store.state.height
+				)
 			}
 		},
 

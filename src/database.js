@@ -109,9 +109,9 @@ export default {
 			"nginx",
 		],
 		"gallery": [
+			"page_2.png",
 			"branding.png",
 			"page_1.png",
-			"page_2.png",
 		]
 	}
 }

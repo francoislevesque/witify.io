@@ -23,10 +23,9 @@
 }
 
 .slideUp {
-	transform: translateY(40px);
+	transform: translateY(70px);
 	opacity: 0;
-	-webkit-transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
-  	transition:         all 1s cubic-bezier(0.23, 1, 0.32, 1);
+  	@include transition(all 1s ease-out-in);
 
 	&.animated {
 		transform: translateY(0px);

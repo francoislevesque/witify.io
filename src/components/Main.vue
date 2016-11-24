@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import Velocity from 'velocity-animate'
 import $ from 'jquery'
 import BeforeReady from '../events/beforeReady'
 
@@ -24,11 +23,9 @@ export default {
 		},
 		afterEnter(el) {
 			this.$store.commit('animationState', 'afterEnter')
-			//Velocity(el, { opacity: '1' })
 		},
 		enterCancelled(el) {
 			this.$store.commit('animationState', 'enterCancelled')
-			//Velocity(el, { opacity: '0' })
 		},
 		beforeLeave(el) {
 			this.$store.commit('animationState', 'beforeLeave')
@@ -39,11 +36,9 @@ export default {
 		},
 		afterLeave(el) {
 			this.$store.commit('animationState', 'afterLeave')
-			//Velocity(el, { opacity: '0' })
 		},
 		leaveCancelled() {
 			this.$store.commit('leaveCancelled', 'afterLeave')
-			//Velocity(el, { opacity: '1' })
 		}
 	}
 }

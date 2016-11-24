@@ -4,7 +4,7 @@ export default {
 	 * Title of the website
 	 * @type {String}
 	 */
-	title: 'Vue Design',
+	title: 'Witify',
 
 	/**
 	 * Default Language
@@ -24,6 +24,6 @@ export default {
 	 * @type {Object}
 	 */
 	emails: {
-		0: 'francois@witify.io'
+		0: 'info@witify.io'
 	}
 }
