@@ -69,13 +69,21 @@ nav.navigation {
 				cursor: pointer;
 				background-color: #e1e1e1;
 
+				&:hover {
+					.menu-icon span {
+						width: 120%;
+						left: -3px;
+					}
+				}
+
 				.menu-icon {
 					width: 32px;
 					height: 24px;
 					position: relative;
 					margin: 0 auto;
+					text-align: center;
 					@include rotate(0deg);
-					@include transition(.5s ease-in-out);
+					@include transition(.5s ease);
 					cursor: pointer;
 				}
 
@@ -89,7 +97,7 @@ nav.navigation {
 					opacity: 1;
 					left: 0;
 					@include rotate(0deg);
-					@include transition(.25s ease-in-out);
+					@include transition(.25s ease);
 				}
 
 				.menu-icon span:nth-child(1) {

@@ -22,18 +22,21 @@
 			</div>
 		</div>
 		<div v-show="ready" class="container">
-			<transition-group name="slideLeftRight" mode="out-in">
+			<transition-group name="slideLeftRight" mode="out-in" style="
+			    position: relative;
+			    width: 100%;
+			    height: 100%;
+			    display: block;
+			">
 				<div v-if="index == $parent.slideNumber" :key="index" class="slide" v-for="(item, key, index) in items">
 					<div class="scroll_content">
-						<div class="img-container">
-							<!-- Vimeo -->
-							<div v-if="key == 'video'">
-								<iframe class="video" :src="item.url + '?color=333333&title=0&byline=0&portrait=0'" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-							<!-- Images -->
-							<div v-else>
-								<img :src="require('../../assets/img/projects/' + 'elium' + '/' + item)" alt="elium">
-							</div>
+						<!-- Vimeo -->
+						<div v-if="key == 'video'" class="video-container">
+							<iframe class="video" :src="item.url + '?color=333333&title=0&byline=0&portrait=0'" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div>
+						<!-- Images -->
+						<div v-else class="img-container">
+							<img :src="require('../../assets/img/projects/' + 'elium' + '/' + item)" alt="elium">
 						</div>
 					</div>
 				</div>
