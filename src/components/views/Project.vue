@@ -63,14 +63,7 @@
 
 							<div class="sub-section">
 								<h3 class="">{{ $t('projects.gallery') }}</h3>
-
 								<gallery :items="project.gallery"></gallery>
-
-								<div class="sub-section">
-									<div class="video-container">
-										<iframe class="video" src="https://player.vimeo.com/video/184901788?color=333333&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>

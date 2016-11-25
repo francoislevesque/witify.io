@@ -6,11 +6,18 @@
 		<div class="gallery">
 			<div class="content">
 				<div 
-				v-for="(item, key) in items" 
+				v-for="(item, key, index) in items" 
 				class="item" 
-				@click="showItem(key)">
+				@click="showItem(index)">
 					<div class="item-content">
-						<img :src="require('../../assets/img/projects/' + 'elium' + '/' + item)" alt="elium">
+						<!-- Vimeo -->
+						<div v-if="key == 'video'">
+							<img :src="require('../../assets/img/projects/' + 'elium' + '/poster.jpg')" alt="elium">
+						</div>
+						<!-- Images -->
+						<div v-else>
+							<img :src="require('../../assets/img/projects/' + 'elium' + '/' + item)" alt="elium">
+						</div>
 					</div>
 				</div>	
 			</div>

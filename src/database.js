@@ -106,12 +106,16 @@ export default {
 			"css-3",
 			"git",
 			"digitalocean",
-			"nginx",
+			"nginx"
 		],
-		"gallery": [
-			"page_2.png",
-			"branding.png",
-			"page_1.png",
-		]
+		"gallery": {
+			"0": "page_2.png",
+			"1": "branding.png",
+			"2": "page_1.png",
+			"video": {
+				"url": "https://player.vimeo.com/video/184901788",
+				"poster": "video.png"
+			}
+		}
 	}
 }

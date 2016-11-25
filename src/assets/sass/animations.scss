@@ -25,7 +25,7 @@
 .slideUp {
 	transform: translateY(70px);
 	opacity: 0;
-  	@include transition(all 1s ease-out-in);
+  	@include transition(all 1s ease);
 
 	&.animated {
 		transform: translateY(0px);
