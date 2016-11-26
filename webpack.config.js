@@ -41,19 +41,19 @@ var WebpackExport = {
 
 if (process.env.NODE_ENV !== 'production') {
 
-	// Load Images
-	WebpackExport.module.loaders.push(
-		{
-			test: /.*\.(gif|png|jpe?g|svg)$/i,
-			loaders: 'file-loader'
-		}
-	);
-
 	// Style Loader
 	WebpackExport.module.loaders.push(
 		{
 			test: /\.scss$/,
 			loader: 'style-loader!css!resolve-url!sass?sourceMap'
+		}
+	);
+
+	// Load Images
+	WebpackExport.module.loaders.push(
+		{
+			test: /.*\.(gif|png|jpe?g|svg)$/i,
+			loaders: 'file-loader'
 		}
 	);
 }
