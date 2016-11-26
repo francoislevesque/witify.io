@@ -17,13 +17,23 @@
 								</div>
 							</div>
 						</div>
+						<div class="scroll-down" @click="scrollTopDescription()">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve">
+								<path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z" fill="#FFFFFF"/>
+							</svg>
+						</div>
 					</div>
-					<div class="section">
+					<div class="section" id="project-description">
 						<div class="container">
-							<div class="sub-section text">
+							<div class="sub-section">
 								<v-scroll animation="slideUp">
-								<h2>{{ project.name }} - {{ $t('categories.' + project.category) }}</h2>
-								<div v-html="$t('projects.' + name + '.description')"></div>
+								<div class="row">
+									<div class="col-md-8">
+										<h2>{{ project.name }} - {{ $t('categories.' + project.category) }}</h2>
+										<div v-html="$t('projects.' + name + '.description')"></div>
+										<a :href="project.url" class="link tm-md">{{ $t('visit_website') }} <img :src="require('../../assets/img/icons/right-arrow.svg')" alt="Right arrow"></a>
+									</div>
+								</div>
 								</v-scroll>
 							</div>
 							<div class="sub-section">
@@ -63,7 +73,7 @@
 
 							<div class="sub-section">
 								<h3 class="">{{ $t('projects.gallery') }}</h3>
-								<gallery :items="project.gallery"></gallery>
+								<gallery :projectName="$route.params.project" :items="project.gallery"></gallery>
 							</div>
 						</div>
 					</div>
@@ -78,6 +88,7 @@
 	import database from '../../database'
 	import Scroll from '../../events/scroll'
 	import Gallery from '../partials/Gallery.vue'
+	import Velocity from 'velocity-animate'
 
 	export default {
 		components: {
@@ -101,6 +112,9 @@
 		methods: {
 			scroll() {
 				Scroll(document.getElementById('scroll_content').scrollTop)
+			},
+			scrollTopDescription() {
+				Velocity(document.getElementById('project-description'), "scroll", {offset: '1px', easing: "easeOutQuint", duration: "600", container: document.getElementById('scroll_content')});
 			},
 			bgOpacity() {/*
 				var newOpacityValue = 1 - (this.$store.state.scrollTop / this.$store.state.height)

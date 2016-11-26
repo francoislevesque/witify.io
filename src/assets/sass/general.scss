@@ -53,8 +53,13 @@ body {
 	padding: 60px 0;
 
 	.sub-section {
-		padding: 40px 0;
+		h2 {
+			margin-bottom: 40px;
+		}
+
+		padding: 100px 0;
 		position: relative;
+		line-height: 1.9em;
 	}
 }
 
@@ -74,6 +79,27 @@ body {
 
 .container-lg {
 	max-width: 1200px;
+}
+
+.text-image {
+	.text, .image {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.text {
+		padding-right: 20%;
+		width: 50%;
+	}
+	.image {
+		width: 49%;
+		height: 600px;
+		img {
+			position: absolute;
+			width: initial;
+			max-width: initial;
+			height: 600px;
+		}
+	}
 }
 
 img {
@@ -101,4 +127,41 @@ body::-webkit-scrollbar {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/** Stats */
+
+.stat {
+	margin-top: 40px;
+
+	.label, .info {
+		display: block;
+		text-align: left;
+		padding: 0;
+	}
+
+	.label {
+		color: #333;
+		font-weight: 600;
+		font-size: 1em;
+	}
+
+	.info {
+		margin-top: 5px;
+		color: #666;
+		font-weight: 300;
+		font-size: 1.3em;
+	}
+}
+
+.coordinates {
+	text-align: right;
+	h3 {
+		margin-top: 40px;
+		font-size: 1.2em;
+		font-weight: 600;
+	}
+	span {
+		display: block;
+	}
 }

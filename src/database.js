@@ -1,6 +1,7 @@
 export default {
 	"save": {
 		"name": "SAVe",
+		"url": "http://save.witify.io",
 		"category": "webapp",
 		"client": "BrioConcept Inc",
 		"dev_time": "3",
@@ -23,12 +24,17 @@ export default {
 			"digitalocean",
 			"nginx",
 		],
-		"gallery": [
+		"gallery": {
+			"1": "page_3.png",
+			"0": "page_2.png",
+			"2": "page_4.png",
+			"3": "page_5.png",
+		}
 			
-		]
 	},
 	"occ": {
 		"name": "Online Crash Courses",
+		"url": "https://onlinecrashcourses.com",
 		"category": "webapp",
 		"client": "Online Crash Courses",
 		"dev_time": "3",
@@ -52,12 +58,21 @@ export default {
 			"digitalocean",
 			"nginx",
 		],
-		"gallery": [
-			
-		]
+		"gallery": {
+			"0": "logo.png",
+			"1": "page_1.png",
+			"2": "page_2.png",
+			"3": "page_3.png",
+			"4": "page_4.png",
+			"5": "page_5.png",
+			"6": "iphone_1.png",
+			"7": "iphone_2.png",
+			"8": "iphone_3.png",
+		}
 	},
 	"coupsur": {
 		"name": "Coup Sur",
+		"url": "http://adapass.com",
 		"category": "webapp",
 		"client": "Baseballtown Inc",
 		"dev_time": "7",
@@ -83,12 +98,16 @@ export default {
 			"digitalocean",
 			"nginx",
 		],
-		"gallery": [
-			
-		]
+		"gallery": {
+			"4": "page_4.png",
+			"1": "page_1.png",
+			"2": "page_2.png",
+			"3": "page_3.png",
+		}
 	},
 	"elium": {
 		"name": "Elium",
+		"url": "http://elium.ca",
 		"category": "webapp",
 		"client": "Elium Inc",
 		"dev_time": "3",
@@ -109,8 +128,8 @@ export default {
 			"nginx"
 		],
 		"gallery": {
-			"0": "page_2.png",
 			"1": "branding.png",
+			"0": "page_2.png",
 			"2": "page_1.png",
 			"video": {
 				"url": "https://player.vimeo.com/video/184901788",

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<transition name="fade">
-			<lightbox v-show="active" :active="active" :items="items" :slideNumber="slideNumber"></lightbox>
+			<lightbox v-show="active" :projectName="projectName" :active="active" :items="items" :slideNumber="slideNumber"></lightbox>
 		</transition>
 		<div class="gallery">
 			<div class="content">
@@ -12,11 +12,11 @@
 					<div class="item-content">
 						<!-- Vimeo -->
 						<div v-if="key == 'video'">
-							<img :src="require('../../assets/img/projects/' + 'elium' + '/poster.jpg')" alt="elium">
+							<img :src="require('../../assets/img/projects/' + projectName + '/poster.jpg')" alt="elium">
 						</div>
 						<!-- Images -->
 						<div v-else>
-							<img :src="require('../../assets/img/projects/' + 'elium' + '/' + item)" alt="elium">
+							<img :src="require('../../assets/img/projects/' + projectName + '/' + item)" alt="elium">
 						</div>
 					</div>
 				</div>	
@@ -29,7 +29,7 @@
 import Lightbox from './Lightbox.vue'
 
 export default {
-	props: ['items'],
+	props: ['projectName', 'items'],
 	components: {
 		'lightbox': Lightbox
 	},

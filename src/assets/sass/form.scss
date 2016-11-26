@@ -8,10 +8,11 @@ form {
 	.form-control {
 		@include box-shadow(none);
 		height: 40px;
+		border: #d1d1d1 2px solid;
 
 		&:active, &:focus {
 			@include box-shadow(none);
-			border: $grey 2px solid;
+			border: #999 2px solid;
 		}
 	}
 
@@ -47,5 +48,19 @@ form {
 		background: white;
 		cursor: inherit;
 		display: block;
+	}
+
+	.radio {
+		display: block;
+		padding: 10px 20px;
+		cursor: pointer;
+		border: 2px solid #d1d1d1;
+		border-radius: 4px;
+		margin-bottom: 18px;
+		@include transition(all 0.3s);
+
+		&.active {
+			border: 2px solid #333;
+		}
 	}
 }

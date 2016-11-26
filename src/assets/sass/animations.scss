@@ -32,3 +32,23 @@
 		opacity: 1;
 	}
 }
+
+.scale {
+	opacity: 0;
+	@include scale(1.1);
+  	@include transition(all 1s ease);
+
+	&.animated {
+		opacity: 1;
+		@include scale(1);
+	}
+}
+
+.fade {
+	opacity: 0;
+  	@include transition(all 1s ease);
+
+	&.animated {
+		opacity: 1;
+	}
+}

@@ -1,58 +1,85 @@
 <template>
 	<div class="page">
 		<v-fullpage>
-			<div class="scroll_content">
+			<div id="scroll_content" class="scroll_content">
 				<div class="wrapper">
 					<div class="section">
 						<div class="container">
-							<h1>{{ $t('about.title') }}</h1>
-							<p class="main">{{ $t('about.subtitle') }}</p>
+							<div class="row">
+								<div class="col-md-8">
+									<h1>{{ $t('about.title') }}</h1>
+									<p class="main">{{ $t('about.subtitle') }}</p>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6">
-								<h2>{{ $t('about.speed.title') }}</h2>
-								<p>{{ $t('about.speed.subtitle') }}</p>
+						<div class="container">
+							<div class="sub-section">
+								<div class="container-sm">
+									<h2>{{ $t('about.speed.title') }}</h2>
+									<p>{{ $t('about.speed.subtitle') }}</p>
+									<div class="stat">
+										<span class="label">Temps de développement moyen</span>
+										<span class="info">Entre 3 et 8 semaines</span>
+									</div>
+								</div>
 							</div>
-							<div class="col-md-6">
-								<h2>{{ $t('about.experience.title') }}</h2>
-								<p>{{ $t('about.experience.subtitle') }}</p>
+							<div class="sub-section">
+								<div class="text-image">
+									<div class="text">
+										<h2>{{ $t('about.experience.title') }}</h2>
+										<p>{{ $t('about.experience.subtitle') }}</p>
+									</div>
+									<div class="image">
+										<v-scroll :style="{'height': '600px'}" animation="scale">
+										<img :src="require('../../assets/img/about/experience.png')" alt="user experience">
+										</v-scroll>
+									</div>
+								</div>
 							</div>
-							<div class="col-md-6">
-								<h2>{{ $t('about.marketing.title') }}</h2>
-								<p>{{ $t('about.marketing.subtitle') }}</p>
+							<div class="sub-section">
+								<div class="text-image">
+									<div class="text">
+										<h2>{{ $t('about.marketing.title') }}</h2>
+										<p>{{ $t('about.marketing.subtitle') }}</p>
+									</div>
+									<div class="image">
+										<v-scroll :style="{'height': '600px'}" animation="scale">
+										<img :src="require('../../assets/img/about/marketing.png')" alt="marketing">
+										</v-scroll>
+									</div>
+								</div>
 							</div>
-							<div class="col-md-6">
-								<h2>{{ $t('about.communication.title') }}</h2>
-								<p>{{ $t('about.communication.subtitle') }}</p>
+							<div class="sub-section">
+								<div class="text-image">
+									<div class="text">
+										<h2>{{ $t('about.communication.title') }}</h2>
+										<p>{{ $t('about.communication.subtitle') }}</p>
+									</div>
+									<div class="image">
+										<v-scroll :style="{'height': '600px'}" animation="scale">
+										<img :src="require('../../assets/img/about/communications.png')" alt="Communication">
+										</v-scroll>
+									</div>
+								</div>
 							</div>
-							<div class="col-md-6">
-								<h2>{{ $t('about.technologies.title') }}</h2>
-								<p>{{ $t('about.technologies.subtitle') }}</p>
-								<div class="technologies">
-									<img :src="require('../../assets/img/technologies/laravel.svg')" alt="Laravel Logo">
-									<img :src="require('../../assets/img/technologies/meteor.svg')" alt="Meteor Logo">
-									<img :src="require('../../assets/img/technologies/socket.io.svg')" alt="Socket.io Logo">
-									<img :src="require('../../assets/img/technologies/vue.svg')" alt="Vue Logo">
-									<img :src="require('../../assets/img/technologies/react.svg')" alt="React Logo">
-									<img :src="require('../../assets/img/technologies/jquery.svg')" alt="JQuery Logo">
-									<img :src="require('../../assets/img/technologies/sass.svg')" alt="Sass Logo">
-									<img :src="require('../../assets/img/technologies/webpack.svg')" alt="Webpack Logo">
-									<img :src="require('../../assets/img/technologies/browserify.svg')" alt="Browserify Logo">
-									<img :src="require('../../assets/img/technologies/html-5.svg')" alt="HTML5 Logo">
-									<img :src="require('../../assets/img/technologies/css-3.svg')" alt="CSS3 Logo">
-									<img :src="require('../../assets/img/technologies/javascript.svg')" alt="Javascript Logo">
-									<img :src="require('../../assets/img/technologies/c++.svg')" alt="C++ Logo">
-									<img :src="require('../../assets/img/technologies/php.svg')" alt="C++ Logo">
-									<img :src="require('../../assets/img/technologies/nodejs.svg')" alt="Node Logo">
-									<img :src="require('../../assets/img/technologies/auth0.svg')" alt="Auth0 Logo">
-									<img :src="require('../../assets/img/technologies/stripe.svg')" alt="Stripe Logo">
-									<img :src="require('../../assets/img/technologies/git.svg')" alt="Git Logo">
-									<img :src="require('../../assets/img/technologies/nginx.svg')" alt="NGINX Logo">
-									<img :src="require('../../assets/img/technologies/apache.svg')" alt="Apache Logo">
-									<img :src="require('../../assets/img/technologies/digitalocean.svg')" alt="Digital Ocean Logo">
-									<img :src="require('../../assets/img/technologies/cloudflare.svg')" alt="Cloudflare Logo">
+							<div class="sub-section">
+								<div class="text-image">
+									<div class="text">
+										<h2>{{ $t('about.technologies.title') }}</h2>
+										<p>{{ $t('about.technologies.subtitle') }}</p>
+									</div>
+									<div class="image">
+										<v-scroll :style="{'height': '600px'}" animation="scale">
+										<img :src="require('../../assets/img/about/techs.png')" alt="Technologies">
+										</v-scroll>
+									</div>
+								</div>
+							</div>
+							<div class="sub-section">
+								<div class="container-sm">
+									<h2>{{ $t('about.cta.title') }}</h2>
+									<p>{{ $t('about.cta.subtitle') }}</p>
+				                	<router-link :to="'/' + $route.params.lang + '/contact'" class="btn">{{ $t("about.cta.link") }}</router-link>
 								</div>
 							</div>
 						</div>
@@ -64,5 +91,19 @@
 </template>
 
 <script>
-	
+	import Scroll from '../../events/scroll'
+	export default {
+		mounted() {
+			document.getElementById('scroll_content').addEventListener('scroll', this.scroll)
+		},
+		remove() {
+			document.getElementById('scroll_content').removeEventListener('scroll', this.scroll)
+			$off()
+		},
+		methods: {
+			scroll() {
+				Scroll(document.getElementById('scroll_content').scrollTop)
+			},
+		}
+	}
 </script>

@@ -13,6 +13,28 @@ a, a:focus, a:hover {
 	color: inherit;
 }
 
+a.link {
+	font-weight: 600;
+	font-size: 1.2em;
+	color: #333;
+	display: inline-block;
+
+	img {
+		width: 30px;
+		height: 23px;
+		opacity: 0;
+		@include transition(all 0.3s);
+		@include transform(translateX(-5px));
+	}
+
+	&:hover {
+		img {
+			opacity: 1;
+			@include transform(translateX(0px));
+		}
+	}
+}
+
 /** Color texts **/
 p, span {
 	color: #999;
@@ -61,3 +83,4 @@ h3 {
 h4 {
 	font-size: 1.5em;
 }
+

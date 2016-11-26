@@ -36,7 +36,7 @@
 						</div>
 						<!-- Images -->
 						<div v-else class="img-container">
-							<img :src="require('../../assets/img/projects/' + 'elium' + '/' + item)" alt="elium">
+							<img :src="require('../../assets/img/projects/' + projectName + '/' + item)" :alt="projectName">
 						</div>
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 
 <script>
 	export default {
-		props: ['items'],
+		props: ['projectName', 'items'],
 		data() {
 			return {
 				ready: false

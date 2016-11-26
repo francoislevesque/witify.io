@@ -1,10 +1,11 @@
 export default {
 	"en": {
+		"visit_website": "Visiter le site web",
 		"nav": {
-			"home": "Home",
-			"projects": "Projects",
-			"about": "Agency",
-			"contact": "Contact",
+			"home": "Accueil",
+			"projects": "Projets",
+			"about": "Agence",
+			"contact": "Nous joindre",
 		},
 		"home": {
 			"title": "Witify",
@@ -64,10 +65,29 @@ export default {
 			"communication": {
 				"title": "Communication",
 				"subtitle": "Nous favorisons une communication constante avec nos clients lors du développement afin d’optimiser la rapidité de développement. Vous pouvez visionner en temps réel la progression de votre projet avec « Cumulus Connect » - un logiciel maison créant un canal de communication efficace entre nos deux équipes."
+			},
+			"cta": {
+				"title": "Nous contacter?",
+				"subtitle": "Nous sommes de vraies personnes ici à Montréal prêtes à répondre à vos questions et vous aider.",
+				"link": "Nous contacter"
 			}
+		},
+		"contact": {
+			"title": "Nous contacter"
 		},
 		"categories": {
 			"webapp": "Application Web"
+		},
+		"type": {
+			"web": "Web",
+			"ios": "iOS",
+			"android": "Android",
+		},
+		"service": {
+			"prototype": "Prototype",
+			"mvp": "Produit minimum viable",
+			"complete": "Solution complète",
+			"update": "Aide avec un produit existant",
 		},
 		"deliverables": {
 			"webapp": "Application Web",

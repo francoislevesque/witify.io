@@ -10,14 +10,14 @@ export default {
 	 * Default Language
 	 * @type {String}
 	 */
-	lang: 'en',
+	lang: 'fr',
 
 	/**
 	 * Multi-language
 	 * Toggles the language menu
 	 * @type {Bool}
 	 */
-	multiLang: true,
+	multiLang: false,
 
 	/**
 	 * Emails for the Contact Form
