@@ -20,7 +20,7 @@
                         <div class="content">
                             <v-scroll animation="slideUp">
                             <h2>{{ $t('projects.' + key + '.title') }}</h2>
-                            <p>{{ $t('projects.' + key + '.subtitle') }}</p>
+                            <p style="max-width: 300px">{{ $t('projects.' + key + '.subtitle') }}</p>
                             <span>{{ project.name }}</span>
                             </v-scroll>
                         </div>

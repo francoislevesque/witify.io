@@ -2,7 +2,7 @@
 	<div class="page">
 		<div class="project" :class="'color-' + $route.params.project">
 			<v-fullpage>
-				<div id="scroll_content" class="scroll_content">
+				<div id="scroll_content" class="scroll_content" @scroll="scroll()">
 					<div class="hero">
 						<div class="bg" :class="name" :style="{opacity: bgOpacity()}"></div>
 						<div class="v-center">
@@ -26,15 +26,19 @@
 					<div class="section" id="project-description">
 						<div class="container">
 							<div class="sub-section">
-								<v-scroll animation="slideUp">
 								<div class="row">
 									<div class="col-md-8">
-										<h2>{{ project.name }} - {{ $t('categories.' + project.category) }}</h2>
-										<div v-html="$t('projects.' + name + '.description')"></div>
+										<v-scroll animation="slideUp">
+											<h2>{{ project.name }} - {{ $t('categories.' + project.category) }}</h2>
+										</v-scroll>
+										<v-scroll animation="slideUp" delay="100">
+											<div v-html="$t('projects.' + name + '.description')"></div>
+										</v-scroll>
+										<v-scroll animation="slideUp" delay="200">
 										<a :href="project.url" class="link tm-md">{{ $t('visit_website') }} <img :src="require('../../assets/img/icons/right-arrow.svg')" alt="Right arrow"></a>
+										</v-scroll>
 									</div>
 								</div>
-								</v-scroll>
 							</div>
 							<div class="sub-section">
 								<div class="row">
@@ -44,13 +48,13 @@
 										<p>{{ project.client }}</p>
 									</div>
 									</v-scroll>
-									<v-scroll animation="slideUp">
+									<v-scroll animation="slideUp" delay="100">
 									<div class="col-sm-4">
 										<h3>{{ $t('projects.dev_time') }}</h3>
 										<p>{{ project.dev_time }} {{ $t('projects.months') }}</p>
 									</div>
 									</v-scroll>
-									<v-scroll animation="slideUp">
+									<v-scroll animation="slideUp" delay="200">
 									<div class="col-sm-4">
 										<h3>{{ $t('projects.deliverables') }}</h3>
 										<p>
@@ -64,7 +68,9 @@
 							</div>
 							<div class="sub-section">
 								<v-scroll animation="slideUp">
-								<h3>{{ $t('projects.technologies') }}</h3>
+									<h3>{{ $t('projects.technologies') }}</h3>
+								</v-scroll>
+								<v-scroll animation="slideUp" delay="100">
 								<div class="technologies">
 									<img v-for="technology in project.technologies" :src="require('../../assets/img/technologies/' + technology + '.svg')" :alt="technology + 'Logo'">
 								</div>
@@ -101,13 +107,6 @@
 				project: database[this.$route.params.project],
 				currentOpacityValue: 1
 			}
-		},
-		mounted() {
-			document.getElementById('scroll_content').addEventListener('scroll', this.scroll)
-		},
-		remove() {
-			document.getElementById('scroll_content').removeEventListener('scroll', this.scroll)
-			$off()
 		},
 		methods: {
 			scroll() {

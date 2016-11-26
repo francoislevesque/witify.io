@@ -1,5 +1,5 @@
 export default {
-	"en": {
+	"fr": {
 		"visit_website": "Visiter le site web",
 		"nav": {
 			"home": "Accueil",
@@ -100,7 +100,7 @@ export default {
 			"proudly": "Website created by Witify"
 		}
 	},
-	"fr": {
+	"en": {
 		"nav": {
 			"home": "Accueil",
 			"about": "Agence",

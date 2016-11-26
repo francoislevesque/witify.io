@@ -47,6 +47,7 @@
                             </div>
                             </v-scroll>
                         </div>
+                        <v-scroll animation="slideRight">
                         <div class="col-md-6 coordinates">
                             <h2>Coordonnées</h2>
                             <h3>Email</h3>
@@ -58,6 +59,7 @@
                             <span>Montréal (Québec) H2X 4E3</span>
                             <span>Canada</span>
                         </div>
+                        </v-scroll>
                     </div>
                     
                 </div>

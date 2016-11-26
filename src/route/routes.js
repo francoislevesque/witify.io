@@ -24,8 +24,9 @@ export default [
 		component: Main,
 		children: [
 			{
+				name: 'home',
 				path: '',
-				redirect: 'projects'
+				component: Home
 			},
 			{
 				name: 'projects',

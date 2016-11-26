@@ -1,5 +1,5 @@
 <template>
-	<div :class="[{'animated': animated()}, animation]" style="position: relative">
+	<div :class="[{'animated': timeSinceInViewPort > delay}, animation]" style="position: relative">
 		<slot></slot>
 	</div>
 </template>
@@ -10,11 +10,19 @@
 			return {
 				elementOffset: 0,
 				elementHeight: 0,
-				firstLoad: false
+				firstLoad: false,
+				timeSinceInViewPort: 0
 			}
 		},
 
-		props: ['animation', 'delay'],
+		props: {
+			'animation': {
+				required: true
+			},
+			'delay': {
+				default: 0
+			}
+		},
 
 		mounted() {
 
@@ -32,14 +40,21 @@
 				vm.elementOffset = vm.$el.offsetTop
 				vm.elementHeight = vm.$el.clientHeight
 			}
+
+			setInterval(function() {
+				if(vm.inViewPort())
+					vm.timeSinceInViewPort += 100
+				else
+					vm.timeSinceInViewPort = 0
+			}, 100)
 		},
 		
 		methods: {
 			// Check if is in viewport
-			animated() {
+			inViewPort() {
 				return (
 					this.firstLoad &&
-					this.elementOffset + this.elementHeight >= this.$store.state.scrollTop &&
+					/*this.elementOffset + this.elementHeight >= this.$store.state.scrollTop &&*/
 					this.elementOffset <= this.$store.state.scrollTop + this.$store.state.height
 				)
 			}

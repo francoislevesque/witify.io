@@ -1,6 +1,6 @@
 <template>
 <transition name="fade">
-	<div id="app" v-show="ready">
+	<div id="app" v-if="ready">
 	
 		<!-- Navigation Bar -->
 		<v-nav></v-nav>
