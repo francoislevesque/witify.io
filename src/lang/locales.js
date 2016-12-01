@@ -52,11 +52,11 @@ export default {
 			},
 			"technologies": {
 				"title": "Avant-garde",
-				"subtitle": "L’utilisation des plus récentes technologies dans le domaine accélère le temps de développement et projette votre projet dans le futur. Nos réalisations sont réactives, performantes, flexibles et novatrices.",
+				"subtitle": "L’utilisation des plus récentes technologies dans le domaine accélère le temps de développement et permet la conception de produits réactifs, performants, flexibles et novateurs.",
 			},
 			"experience": {
 				"title": "Expérience",
-				"subtitle": "L’utilisation des plus récentes technologies dans le domaine accélère le temps de développement et projette votre projet dans le futur. Nos réalisations sont réactives, performantes, flexibles et novatrices."
+				"subtitle": "Nous croyons que la création d’une application passe d’abord par l’expérience. Le design étant la façade du logiciel, nous y accordons une importance particulière. Nos interfaces sont non seulement esthétiques et conviviales, mais favorisent également la réalisation rapide des tâches."
 			},
 			"marketing": {
 				"title": "Marketing",
@@ -73,7 +73,20 @@ export default {
 			}
 		},
 		"contact": {
-			"title": "Nous contacter"
+			"title": "Nous joindre",
+			"form": {
+				"name": "Nom",
+				"email": "Courriel",
+				"phone": "Téléphone",
+				"message": "Message",
+				"type": "Type de projet",
+				"service": "Service",
+				"send": "Envoyer",
+			},
+			"coordinates": "Coordonnées",
+			"address": "Adresse",
+			"email": "Courriel",
+			"phone": "Téléphone",
 		},
 		"categories": {
 			"webapp": "Application Web"

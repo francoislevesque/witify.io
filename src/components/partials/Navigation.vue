@@ -21,7 +21,7 @@
 	        </div>
 		</transition>
         <div class="navigation-header">
-        	<div :class="{'inTransition' : inChange}" class="box title">
+        	<div v-if="$route.name != 'home'" :class="{'inTransition' : inChange}" class="box title">
     			<div id="nav_title" class="v-center t-center">
     				<span class="content"> 
     					<router-link v-if="isProject" :to="'/' + $route.params.lang + '/projects'" exact>
@@ -43,11 +43,13 @@
 					</div>
     			</div>
     		</div><!--
-    		--><router-link :to="'/' + $route.params.lang + '/'"  class="logo box">
+    		--><transition name="fade">
+    			<router-link v-if="$route.name != 'home'" :to="'/' + $route.params.lang + '/'"  class="logo box">
     			<div class="v-center t-center">
             		<img :src="require('../../assets/img/logo.svg')" alt="Witify Inc Logo">
     			</div>
-            </router-link>
+            	</router-link>
+            </transition>
         </div>
         
 	</nav>
@@ -67,6 +69,9 @@
 		},
 		mounted() {
 			this.title = this.$store.state.route.title
+			if(this.$route.name == 'project') {
+				this.isProject = true;
+			}
 		},
 		watch: {
 			'$route': function (to, from) {

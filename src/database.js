@@ -133,7 +133,7 @@ export default {
 			"2": "page_1.png",
 			"video": {
 				"url": "https://player.vimeo.com/video/184901788",
-				"poster": "video.png"
+				"poster": "poster.png"
 			}
 		}
 	}

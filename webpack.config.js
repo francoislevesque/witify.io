@@ -40,17 +40,11 @@ var WebpackExport = {
 }
 
 if (process.env.NODE_ENV !== 'production') {
-
-	// Style Loader
 	WebpackExport.module.loaders.push(
 		{
 			test: /\.scss$/,
 			loader: 'style-loader!css!resolve-url!sass?sourceMap'
-		}
-	);
-
-	// Load Images
-	WebpackExport.module.loaders.push(
+		},
 		{
 			test: /.*\.(gif|png|jpe?g|svg)$/i,
 			loaders: 'file-loader'
@@ -62,11 +56,20 @@ if (process.env.NODE_ENV === 'production') {
 
 	WebpackExport.module.devtool = '#source-map'
 
+	// Extract CSS (module loader)
+	WebpackExport.module.loaders.push(
+		{
+			test: /\.scss$/,
+			loader: ExtractTextPlugin.extract('css!resolve-url!sass?sourceMap')
+		}
+	);
+
 	// Webpack Image
 	WebpackExport.module.loaders.push(
 		{
 			test: /.*\.(gif|png|jpe?g|svg)$/i,
-			loaders: ['file-loader',
+			loaders: [
+				'file-loader?name=img/[sha512:hash:base64:7].[ext]',
 				{
 					loader: 'image-webpack',
 					query: {
@@ -83,14 +86,6 @@ if (process.env.NODE_ENV === 'production') {
 					}
 				}
 			]
-		}
-	);
-
-	// Extract CSS (module loader)
-	WebpackExport.module.loaders.push(
-		{
-			test: /\.scss$/,
-			loader: ExtractTextPlugin.extract('css!resolve-url!sass?sourceMap')
 		}
 	);
 

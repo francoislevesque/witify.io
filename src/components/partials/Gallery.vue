@@ -12,7 +12,7 @@
 					<div class="item-content">
 						<!-- Vimeo -->
 						<div v-if="key == 'video'">
-							<img :src="require('../../assets/img/projects/' + projectName + '/poster.jpg')" alt="elium">
+							<img :src="require('../../assets/img/projects/' + projectName + '/' + item.poster)" alt="elium">
 						</div>
 						<!-- Images -->
 						<div v-else>
