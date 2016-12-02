@@ -11,17 +11,17 @@
 			                <li><router-link :to="'/' + $route.params.lang + '/contact'" exact>{{ $t("nav.contact") }}</router-link></li>
 							
 							<!-- Lang Links -->
-							<template v-if="multiLang">
+							<div class="lang" v-if="multiLang">
 				                <li v-if="$route.params.lang == 'fr'"><router-link :to="{ path: pathTo('en') }">EN</router-link></li>
 				                <li v-if="$route.params.lang == 'en'"><router-link :to="{ path: pathTo('fr') }">FR</router-link></li>
-							</template>
+							</div>
 			            </ul>
 		        	</div>
 	        	</div>
 	        </div>
 		</transition>
         <div class="navigation-header">
-        	<div v-if="$route.name != 'home'" :class="{'inTransition' : inChange}" class="box title">
+        	<div :class="{'inTransition' : inChange}" class="box title">
     			<div id="nav_title" class="v-center t-center">
     				<span class="content"> 
     					<router-link v-if="isProject" :to="'/' + $route.params.lang + '/projects'" exact>
@@ -44,7 +44,7 @@
     			</div>
     		</div><!--
     		--><transition name="fade">
-    			<router-link v-if="$route.name != 'home'" :to="'/' + $route.params.lang + '/'"  class="logo box">
+    			<router-link :to="'/' + $route.params.lang + '/'"  class="logo box">
     			<div class="v-center t-center">
             		<img :src="require('../../assets/img/logo.svg')" alt="Witify Inc Logo">
     			</div>
@@ -73,11 +73,6 @@
 				this.isProject = true;
 			}
 		},
-		watch: {
-			'$route': function (to, from) {
-				this.active = false
-			}
-		},
 		methods: {
 			toggle() {
 				this.active = !this.active;
@@ -88,6 +83,7 @@
 			}
 		},
 		watch: {
+			// Listen for title changes
 			'$store.state.route.title': function(to, from) {
 				this.inChange = true
 				this.active = false
@@ -95,6 +91,17 @@
 				setTimeout(function() {
 					vm.inChange = false
 					vm.title = to
+					vm.isProject = vm.$route.name == 'project'
+				}, 300)
+			},
+			// Listen for lang changes
+			'$store.state.lang': function(to, from) {
+				this.inChange = true
+				this.active = false
+				var vm = this
+				setTimeout(function() {
+					vm.inChange = false
+					vm.title = vm.$store.state.route.title
 					vm.isProject = vm.$route.name == 'project'
 				}, 300)
 			}

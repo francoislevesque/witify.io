@@ -1,5 +1,5 @@
 <template>
-	<div class="fullpage" :style="{'height': this.$store.state.height + 'px'}">
+	<div class="fullpage">
 		<slot></slot>
 	</div>
 </template>

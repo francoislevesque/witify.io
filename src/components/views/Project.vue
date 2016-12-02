@@ -4,7 +4,7 @@
 			<v-fullpage>
 				<div id="scroll_content" class="scroll_content" @scroll="scroll()">
 					<div class="hero">
-						<div class="bg" :class="name" :style="{opacity: bgOpacity()}"></div>
+						<div class="bg" :class="name"></div>
 						<div class="v-center">
 							<div class="content">
 								<div class="container">
@@ -72,7 +72,9 @@
 								</v-scroll>
 								<v-scroll animation="slideUp" delay="100">
 								<div class="technologies">
-									<img v-for="technology in project.technologies" :src="require('../../assets/img/technologies/' + technology + '.svg')" :alt="technology + 'Logo'">
+									<div v-for="technology in project.technologies" class="tech">
+										<img :src="require('../../assets/img/technologies/' + technology + '.svg')" :alt="technology + 'Logo'">
+									</div>
 								</div>
 								</v-scroll>
 							</div>

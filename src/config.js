@@ -17,7 +17,7 @@ export default {
 	 * Toggles the language menu
 	 * @type {Bool}
 	 */
-	multiLang: false,
+	multiLang: true,
 
 	/**
 	 * Emails for the Contact Form

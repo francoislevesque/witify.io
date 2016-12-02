@@ -1,33 +1,220 @@
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
-
+@media only screen and (max-width : 1365px) {
+	/** Portfolio Page */
+	.project-carousel .project .content {
+		padding: 20px;
+		h2 {
+			font-size: 2em;
+		},
+		p, span {
+			font-size: 1.1em;
+		}
+	}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	/** Navigation */
+	nav.navigation {
+		position: fixed;
+		background-color: #fff;
+		width: 100%;
 
+		.navigation-header {
+			position: initial;
+			width: 100%;
+		}
+	}
+	nav.navigation .navigation-header .box.title {
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-align: left;
+		left: initial;
+		background-color: transparent;
+		@include box-shadow(none);
+		.v-center {
+			flex-direction: initial;
+			justify-content: flex-end;
+			align-items: center;
+		}
+	}
+
+	.technologies .tech {
+		width: 15%;
+		padding-right: 7%;
+	}
+
+	/** Portfolio Page */
+	.page {
+		overflow: auto; // For Portfolio Page
+	}
+	.project-carousel {
+		height: initial !important;
+		.fullpage {
+			margin-top: 0;
+		}
+		#projects {
+			height: initial !important;
+			@include translate(0,0);
+			.project {
+				background-color: #000;
+				width: 100%;
+				display: block;
+				position: relative;
+				left: 0 !important;
+				height: initial !important;
+				&:hover {
+					.bg {
+						opacity: 0.5;
+					}
+				}
+				.bg {
+					opacity: 0.7;
+				}
+				.content {
+					position: initial;
+					padding: 80px 20px;
+				}
+			}
+		}
+		.left, .right {
+			display: none;
+		}
+	}
+
+	/** Contact */
+	.contact {
+		.coordinates {
+			margin-top: 80px;
+			text-align: left;
+		}
+	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-    
+	
+	.technologies .tech {
+		width: 20%;
+		padding-right: 10%;
+	}
+	
+	.section {
+		padding-top: 40px;
+		padding-bottom: 65px;
+	}
+
+	.section .sub-section {
+		padding: 30px 0;
+	}
+
+	/** About */
+	.about {
+		.text-image {
+			.text {
+				width: 100%;
+			}
+			.image {
+				margin-top: 50px;
+				width: 100%;
+				height: auto;
+				position: initial;
+				div {
+					height: auto !important;  // For the scroll component
+				}
+				img {
+					position: initial;
+					height: auto !important;
+					width: 100%;
+				}
+			}
+		}
+	}
+	
 }
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+	
+	/** Text Size */
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	h3 {
+		font-size: 1.2em;
+	}
+	.title span {
+		font-size: 1.2em;
+	}
 
+	/** Navigation */
+	nav.navigation {
+		.navigation-header {
+			height: 65px;
+			.box.title {
+				height: 65px;
+			}
+			.box {
+				width: 65px;
+				&.logo {
+					img {
+						width: 30px;
+					}
+				}
+				&.menu {
+					.menu-icon {
+						width: 20px;
+						height: 16px;
+						span {
+							height: 3px;
+						}
+						span:nth-child(2), span:nth-child(3) {
+							top: 7px;
+						}
+						span:nth-child(4) {
+							top: 14px;
+						}
+					}
+				}
+			}
+		}
+		.navigation-content ul li a {
+			font-size: 1.2em;
+		}
+	}
+	
+	/** Project Page */
+	.project .hero {
+		background-color: #000;
+		height: initial !important;
+		.bg {
+			opacity: 0.5;
+		}
+	}
+	.fullpage {
+		margin-top: 65px !important;
+	}
+	.fullpage .scroll_content .v-center {
+		padding-top: 80px;
+		padding-bottom: 120px; // for scroll button
+		height: initial !important;
+	}
+	.technologies .tech {
+		width: 25%;
+		padding-right: 12%;
+	}
+
+	/** Gallery */
+	.gallery .item .item-content img {
+		height: initial;
+	}
 }
 
 /* Custom, iPhone Retina */ 
 @media only screen and (max-width : 320px) {
     
-}
-
-
-/** Fullpage helper */
-@media only screen and (max-height : 480px), (max-width : 768px) {
-    .fullpage {
-        height: initial !important;
-        margin-top: $navHeight;
-    }
 }

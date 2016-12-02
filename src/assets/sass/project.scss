@@ -1,5 +1,6 @@
 .project {
 	width: 100%;
+	height: 100%;
 	background-color: #fff;
 
 	.scroll-down {
@@ -67,10 +68,15 @@
 
 .technologies {
 	margin-top: 20px;
-
+	
+	.tech {
+		width: 10%;
+		display: inline-block;
+		padding-right: 5%;
+	}
+	
 	img {
-		width: 40px;
-		margin-right: 40px;
+		width: 100%;
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}

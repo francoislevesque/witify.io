@@ -1,6 +1,6 @@
 <template>
-    <div class="page">
-        <div class="scroll_content">
+    <div class="page contact">
+        <div id="scroll_content" class="scroll_content" @scroll="scroll()">
             <div class="wrapper">
                 <div class="section">
                 <div class="container">
@@ -70,6 +70,8 @@
 </template>
 
 <script>
+import Scroll from '../../events/scroll'
+
 export default {
     data() {
         return {
@@ -102,7 +104,10 @@ export default {
             }, (response) => {
                 console.log('fail')
             })
-        }
+        },
+        scroll() {
+            Scroll(document.getElementById('scroll_content').scrollTop)
+        },
     }
 }
 </script>

@@ -14,8 +14,9 @@
 
 	&:hover, &:focus, &:active {
 		@include box-shadow(none);
-		background-color: #333;
+		background-color: #666;
 		color: #fff;
+		border-color: #666;
 	}
 
 	&.btn-icon:before {
@@ -33,10 +34,14 @@
 		}
 	}
 
-	&.btn-success {
+	&.btn-black {
+		border-color: #333;
+		background-color: #333;
+		color: #fff;
 
-		&:hover {
-
+		&:hover, &:focus, &:active {
+			background-color: #666;
+			border-color: #666;
 		}
 	}
 

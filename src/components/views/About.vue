@@ -1,8 +1,7 @@
 <template>
-	<div class="page">
+	<div class="page about">
 		<v-fullpage>
 			<div id="scroll_content" class="scroll_content" @scroll="scroll()">
-				<div class="wrapper">
 					<div class="section">
 						<div class="container">
 							<div class="row">
@@ -100,7 +99,6 @@
 							</div>
 						</div>
 					</div>
-				</div>
 			</div>
 		</v-fullpage>
 	</div>

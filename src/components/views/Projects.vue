@@ -1,12 +1,11 @@
 <template>
-    <div class="page">
+    <div id="page" class="page" @scroll="scroll()">
         <div class="project-carousel">
             <v-fullpage>
                 <div id="projects" 
                     :class="{'leave': onLeave}"
                     :style="{
-                        width: nProjects*($store.state.width/3) + $store.state.width + 'px',
-                        transform: 'translateX(' + translation() + 'px)'
+                        transform: 'translateX(' + translation() + 'px)',
                     }">
                     <div class="project" 
                         v-for="(project, key, index) in projects"  
@@ -14,8 +13,9 @@
                         @click="goToProjectPage(index, key)"
                         :id="'project-' + key"
                         :style="{
-                            width: projectWidth(key) + 'px'
-                        }">
+                            left: index * 33.333 + '%'
+                        }"
+                        >
                         <div class="bg" :class="key"></div>
                         <div class="content">
                             <v-scroll animation="slideUp">
@@ -39,6 +39,7 @@
 
 <script>
 
+import Scroll from '../../events/scroll'
 import database from '../../database'
 
 export default {
@@ -62,22 +63,27 @@ export default {
     methods: {
         goToProjectPage(index, project_name) {
             
-            var time = 300
-            if(this.firstSlide == index - 1)
-                time = 0
-            
-            this.firstSlide = index - 1
+            if(this.$store.state.width > 768) {
+                var time = 300
+                if(this.firstSlide == index - 1)
+                    time = 0
+                
+                this.firstSlide = index - 1
 
-            var vm = this;
-            setTimeout(function() {
-                vm.onLeave = 1
-            }, time)
+                var vm = this;
+                setTimeout(function() {
+                    vm.onLeave = 1
+                }, time)
 
-            this.onLeave = 1
+                this.onLeave = 1
+                
+                setTimeout(function() {
+                    vm.changeRoute(project_name)
+                }, time)
+            } else {
+                this.changeRoute(project_name)
+            }
             
-            setTimeout(function() {
-                vm.changeRoute(project_name)
-            }, time)
         },
         changeRoute(project_name) {
             this.$router.push({
@@ -101,7 +107,10 @@ export default {
         },
         projectWidth(project_id) {
             return this.$store.state.width/3
-        }
+        },
+        scroll() {
+            Scroll(document.getElementById('page').scrollTop)
+        },
     }
 }
 </script>

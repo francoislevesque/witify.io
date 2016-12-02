@@ -9,11 +9,8 @@ export default {
 		},
 		"home": {
 			"title": "Witify",
-			"subtitle": "Les artisans du web",
-			"button": "Visiter nos projets"
 		},
 		"projects": {
-
 			"client": "Client",
 			"deliverables": "Livrables",
 			"dev_time": "Temps",
@@ -25,7 +22,7 @@ export default {
 			"save": {
 				"title": "Solliciter le marché de la voiture électrique",
 				"subtitle": "Système de réservation de voiture électriques en ligne.",
-				"description": "<p>La voiture électrique devenant de plus en plus populaire, de nombreuses municipalités en ont fait l’acquisition ces dernières années. Cependant, sans système de gestion en place, l’utilisation de ces dernières devient difficile. SAVe est un projet pilote pour les municipalités désirant faire plus grande utilisation de leurs véhicules électriques.</p><p>BrioConcept nous a approché afin de créer une application web pour optimiser la réservation de voitures en ligne. Cette dernière permet aujourd’hui à des centaines d’utilisateurs par mois de réserver des voitures rapidement en ligne.</p>",
+				"description": "<p>L'autopartage de voitures électriques est de plus en plus utlisé dans les municipalités. Cependant, sans système de gestion en place, l'autopartage devient difficile et peu efficace. SAVe est un projet pilote pour les municipalités désirant faire plus grande utilisation de leurs véhicules électriques.</p><p>BrioConcept nous a approché afin de créer une application web pour optimiser la réservation de voitures en ligne. Cette dernière permet aujourd’hui à des centaines d’utilisateurs par mois de réserver des voitures rapidement en ligne.</p>",
 			},
 			"elium": {
 				"title": "Stimuler les ventes",
@@ -114,26 +111,23 @@ export default {
 		}
 	},
 	"en": {
-		"visit_website": "Visiter le site web",
+		"visit_website": "Visit the website",
 		"nav": {
-			"home": "Accueil",
-			"projects": "Projets",
-			"about": "Agence",
-			"contact": "Nous joindre",
+			"home": "Home",
+			"projects": "Projects",
+			"about": "Agency",
+			"contact": "Contact",
 		},
 		"home": {
 			"title": "Witify",
-			"subtitle": "Les artisans du web",
-			"button": "Visiter nos projets"
 		},
 		"projects": {
-
 			"client": "Client",
-			"deliverables": "Livrables",
-			"dev_time": "Temps",
-			"months": "mois",
-			"technologies": "Technologies utilisées",
-			"gallery": "Gallerie",
+			"deliverables": "Deliverables",
+			"dev_time": "Time",
+			"months": "months",
+			"technologies": "Used technologies",
+			"gallery": "Gallery",
 
 			// Project list
 			"save": {
@@ -158,7 +152,7 @@ export default {
 			}
 		},
 		"about": {
-			"title": "À propos de Witify",
+			"title": "About Witify",
 			"subtitle": "Nous sommes une équipe équilibrée, dynamique et audacieuse qui confectionne des produits digitaux d’une grande qualité pour le web.",
 			"speed": {
 				"title": "Vitesse et flexibilité",
@@ -187,10 +181,10 @@ export default {
 			}
 		},
 		"contact": {
-			"title": "Nous contacter"
+			"title": "Contact us"
 		},
 		"categories": {
-			"webapp": "Application Web"
+			"webapp": "Web Application"
 		},
 		"type": {
 			"web": "Web",
@@ -199,16 +193,16 @@ export default {
 		},
 		"service": {
 			"prototype": "Prototype",
-			"mvp": "Produit minimum viable",
-			"complete": "Solution complète",
-			"update": "Aide avec un produit existant",
+			"mvp": "Minimum viable product",
+			"complete": "Complete solution",
+			"update": "Help with an existing product",
 		},
 		"deliverables": {
-			"webapp": "Application Web",
-			"branding": "Image de marque",
-			"ux": "Interface d'utilisateur",
+			"webapp": "Web Application",
+			"branding": "Branding",
+			"ux": "User Interface",
 			"api": "API",
-			"embedded-system": "Système embarqué"
+			"embedded-system": "Embedded System"
 		},
 		"footer": {
 			"proudly": "Website created by Witify"

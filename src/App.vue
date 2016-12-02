@@ -1,6 +1,5 @@
 <template>
-<transition name="fade">
-	<div id="app" v-if="ready">
+	<div id="app">
 	
 		<!-- Navigation Bar -->
 		<v-nav></v-nav>
@@ -11,7 +10,6 @@
 		<!-- Loading --> 
 		<v-loading></v-loading>
 	</div>
-</transition>
 </template>
 
 <script>
@@ -25,16 +23,6 @@ export default {
 		'v-nav': Navigation,
 		'v-footer': Footer,
 		'v-loading': Loading
-	},
-
-	data() {
-		return {
-			ready: false
-		}
-	},
-
-	mounted() {
-		this.ready = true
 	}
 }
 </script>

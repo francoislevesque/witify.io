@@ -146,6 +146,7 @@ nav.navigation {
 			list-style: none;
 			text-align: center;
 			height: initial;
+			padding-left: 0;
 
 			li {
 				display: block;
@@ -155,7 +156,6 @@ nav.navigation {
 					font-size: 2em;
 					font-weight: 700;
 					padding: 20px;
-					border-bottom: 2px solid darken(#fff, 5);
 					position: relative;
 					color: #999;
 					@include transition(color 0.3s ease-in-out);
@@ -179,6 +179,16 @@ nav.navigation {
 							width: 100%;
 						}
 					}
+				}
+			}
+
+			.lang a {
+				margin-top: 10px;
+				font-size: 1em;
+				&:after {
+					display: none;
+					height: 0px;
+					background-color: #fff;
 				}
 			}
 		}
