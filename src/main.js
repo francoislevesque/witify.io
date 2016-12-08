@@ -1,6 +1,4 @@
 /** NPM Packages */
-import JQuery from'jquery'
-import Slick from 'slick-carousel'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'

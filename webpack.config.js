@@ -31,15 +31,19 @@ var WebpackExport = {
 			}
 		]
 	},
-	devServer: {
-		historyApiFallback: true,
-		noInfo: true
-	},
-	devtool: '#eval-source-map',
+	devtool: '',
 	plugins: []
 }
 
 if (process.env.NODE_ENV !== 'production') {
+
+	WebpackExport.devtool = '#cheap-module-eval-source-map';
+
+	WebpackExport.devServer = {
+		historyApiFallback: true,
+		noInfo: true
+	};
+
 	WebpackExport.module.loaders.push(
 		{
 			test: /\.scss$/,
@@ -54,7 +58,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 if (process.env.NODE_ENV === 'production') {
 
-	WebpackExport.module.devtool = '#source-map'
+	WebpackExport.devtool = '#cheap-module-source-map'
 
 	// Extract CSS (module loader)
 	WebpackExport.module.loaders.push(
@@ -77,10 +81,10 @@ if (process.env.NODE_ENV === 'production') {
 						optimizationLevel: 7,
 						interlaced: false,
 						mozjpeg: {
-							quality: '70',
+							quality: '60',
 						},
 						pngquant: {
-							quality: '65-90',
+							quality: '65',
 							speed: 4
 						}
 					}
@@ -105,11 +109,7 @@ if (process.env.NODE_ENV === 'production') {
 
 	// UglifyJS
 	WebpackExport.plugins.push(
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false
-			}
-		})
+		new webpack.optimize.UglifyJsPlugin({minimize: true})
 	);
 	
 	// Prepender	
