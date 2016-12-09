@@ -1,8 +1,6 @@
-.home {
-	
-	#vector {
-		position: absolute;
-	}
+.home .fullpage {
+	overflow: hidden;
+	margin-top: 0px !important;
 
 	.section {
 		padding: 60px 0;
@@ -14,12 +12,15 @@
 
 	#bg {
 		background: #fff;
-		canvas {
-			background: #fff;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
+		pointer-events: none;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	.project-link {
+		display: block;
 	}
 
 	.home-title {
@@ -36,6 +37,7 @@
 	}
 
 	.title {
+		margin-bottom: 0;
 		h1 {
 			color: #999;
 			font-size: 1.5em;

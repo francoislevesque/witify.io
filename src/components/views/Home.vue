@@ -4,7 +4,7 @@
 			<div id="bg"></div>
 			<div class="section">
 				<div class="container container-sm">
-					<router-link :to="'/' + $route.params.lang + '/projects'">
+					<router-link :to="'/' + $route.params.lang + '/projects'" class="project-link">
 					<div v-on:mouseover="onProjectLink = true" v-on:mouseout="onProjectLink = false" class="home-title">
 						<v-scroll animation="fade">
 							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -44,7 +44,6 @@ export default {
 		}
 	},
 	mounted() {
-		console.log('in');
 		var vm = this;
 		var AMOUNTX = 70, AMOUNTY = 20;
 			var container;
@@ -87,8 +86,6 @@ export default {
 
 				container.appendChild( renderer.domElement );
 				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 				window.addEventListener( 'resize', onWindowResize, false );
 			}
 			function onWindowResize() {
@@ -102,20 +99,6 @@ export default {
 			function onDocumentMouseMove( event ) {
 				mouseX = (event.clientX - windowHalfX ) / 1;
 				mouseY = (event.clientY - windowHalfY ) / 1;
-			}
-			function onDocumentTouchStart( event ) {
-				if ( event.touches.length === 1 ) {
-					event.preventDefault();
-					mouseX = (event.touches[ 0 ].pageX - windowHalfX ) / 1;
-					mouseY = (event.touches[ 0 ].pageY - windowHalfY ) / 1;
-				}
-			}
-			function onDocumentTouchMove( event ) {
-				if ( event.touches.length === 1 ) {
-					event.preventDefault();
-					mouseX = (event.touches[ 0 ].pageX - windowHalfX ) / 1;
-					mouseY = (event.touches[ 0 ].pageY - windowHalfY ) / 1;
-				}
 			}
 			function animate() {
 				vm.animationFrameId = requestAnimationFrame( animate );
@@ -142,7 +125,6 @@ export default {
 			}
 	},
 	destroyed() {
-		console.log('out')
 		cancelAnimationFrame(this.animationFrameId);
 		/*document.removeEventListener( 'mousemove', onDocumentMouseMove, false );
 		document.removeEventListener( 'touchstart', onDocumentTouchStart, false );

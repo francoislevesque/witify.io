@@ -34,9 +34,11 @@ $name = Trim(stripslashes($_POST['name']));
 $email = Trim(stripslashes($_POST['email']));
 $phone = Trim(stripslashes($_POST['phone']));
 $message = Trim(stripslashes($_POST['message']));
+$type = Trim(stripslashes($_POST['type']));
+$service = Trim(stripslashes($_POST['service']));
 
 // Set Subject
-$subject = "Demande d’informations sur Jussaume.ca";
+$subject = "Nouveau prospect sur Witify.io";
 
 // Validation
 $error = null;
@@ -48,6 +50,10 @@ if($email == "" || $email == null)
 	$error = "email";
 if($name == "" || $name == null)
 	$error = "name";
+if($type == "" || $type == null)
+	$type = "email";
+if($service == "" || $service == null)
+	$service = "name";
 
 if ($error != null) {
 	http_response_code(422);
@@ -69,14 +75,19 @@ $body .= "\n";
 $body .= "Message: ";
 $body .= $message;
 $body .= "\n";
+$body .= "Type: ";
+$body .= $type;
+$body .= "\n";
+$body .= "Service: ";
+$body .= $service;
+$body .= "\n";
 
 // Send email 
-
-foreach($EmailTo as $to) {
+/*foreach($EmailTo as $to) {
 	$success = mail($to, $subject, $body, $headers);
-}
+}*/
 
-//$success = true;
+$success = true;
 
 // Check if email is successfully sent
 if ($success) {

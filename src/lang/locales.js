@@ -85,6 +85,8 @@ export default {
 			"address": "Adresse",
 			"email": "Courriel",
 			"phone": "Téléphone",
+			"success": "Votre message a été envoyé avec succès. Nous allons vous répondre aussi vite que possible.",
+			"error": "Veuillez réessayer plus tard. Vous pouvez nous rejoindre via 'francois@witify.io'"
 		},
 		"categories": {
 			"webapp": "Application Web"
@@ -185,7 +187,7 @@ export default {
 		"contact": {
 			"title": "Contact Us",
 			"form": {
-				"name": "Namr",
+				"name": "Name",
 				"email": "Email",
 				"phone": "Phone",
 				"message": "Message",
@@ -197,6 +199,8 @@ export default {
 			"address": "Adress",
 			"email": "Email",
 			"phone": "Phone",
+			"success": "Your message has been sent successfully. We will respond as quickly as possible.",
+			"error": "Please try again later. You may try to reach us via 'info@witify.io'"
 		},
 		"categories": {
 			"webapp": "Web Application"

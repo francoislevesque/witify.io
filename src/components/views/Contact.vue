@@ -34,15 +34,23 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <h3>{{ $t('contact.form.type') }}</h3>
-                                            <div v-for="type in types" class="radio" @click="data.type = type" :class="{'active': type == data.type}">{{ $t('type.' + type) }}</div>
+                                            <div v-for="type in types" class="radio" @click="data.type = $t('type.' + type)" :class="{'active': $t('type.' + type) == data.type}">{{ $t('type.' + type) }}</div>
                                         </div>
                                         <div class="col-md-6">
                                             <h3>{{ $t('contact.form.service') }}</h3>
-                                            <div v-for="service in services" class="radio" @click="data.service = service" :class="{'active': service == data.service}">{{ $t('service.' + service) }}</div>
+                                            <div v-for="service in services" class="radio" @click="data.service = $t('service.' + service)" :class="{'active': $t('service.' + service) == data.service}">{{ $t('service.' + service) }}</div>
                                         </div>
                                     </div>
                                     
                                     <input type="submit" class="btn" :value="$t('contact.form.send')">
+                                    <br>
+                                    <br>
+
+                                    <transition name="scale">
+                                        <span v-if="error" class="after-mail error">{{ $t('contact.error') }}</span>
+                                        <span v-if="success" class="after-mail success">{{ $t('contact.success') }}</span>
+                                    </transition>
+                                    
                                 </form>
                             </div>
                             </v-scroll>
@@ -75,6 +83,8 @@ import Scroll from '../../events/scroll'
 export default {
     data() {
         return {
+            error: false,
+            success: false,
             data: {
                 name: '',
                 email: '',
@@ -99,15 +109,48 @@ export default {
 
 	methods: {
         sendEmail() {
-            this.$http.post('/contact.php', this.data).then((response) => {
-                console.log('success')
+            var vm = this
+            var text =  "<h2>Nouveau lead sur witify.io</h2>" +
+                        "<p><strong>Nom: </strong>" + this.data.name + "</p>" +
+                        "<p><strong>Email: </strong>" + this.data.email + "</p>" +
+                        "<p><strong>Phone: </strong>" + this.data.phone + "</p>" +
+                        "<p><strong>Message: </strong></br>" + this.data.message + "</p>" +
+                        "<p><strong>Type: </strong>" + this.data.type + "</p>" +
+                        "<p><strong>Service: </strong>" + this.data.service + "</p>"
+
+            this.error = false
+            this.success = false
+
+            this.$http.post('https://mandrillapp.com/api/1.0/messages/send.json', {
+                "key": "yyRbndvUFNx5Uzy1Z9FHhA",
+                "message": {
+                    "from_email": vm.data.email,
+                    "to": [{
+                        "email": "info@witify.io",
+                        "name": "Witify Inc",
+                        "type": "to"
+                    }],
+                    "autotext": "true",
+                    "subject": "Nouveau lead sur witify.io",
+                    "html": text
+                }
+            }).then((response) => {
+                this.success = true
+                this.data = {
+                    name: '',
+                    email: '',
+                    phone: '',
+                    message: '',
+                    type: '',
+                    service: '',
+                }
             }, (response) => {
-                console.log('fail')
+                this.error = true
             })
         },
         scroll() {
             Scroll(document.getElementById('scroll_content').scrollTop)
-        },
+        }
     }
 }
 </script>
