@@ -70,7 +70,7 @@ if (process.env.NODE_ENV === 'production') {
 
 	// Webpack Image
 	WebpackExport.module.loaders.push(
-		{
+		/*{
 			test: /.*\.(gif|png|jpe?g|svg)$/i,
 			loaders: [
 				'file-loader?name=img/[sha512:hash:base64:7].[ext]',
@@ -90,6 +90,10 @@ if (process.env.NODE_ENV === 'production') {
 					}
 				}
 			]
+		}*/
+		{
+			test: /.*\.(gif|png|jpe?g|svg)$/i,
+			loaders: 'file-loader'
 		}
 	);
 

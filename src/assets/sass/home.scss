@@ -1,6 +1,5 @@
 .home {
-	background-color: #222;
-
+	
 	#vector {
 		position: absolute;
 	}
@@ -10,16 +9,48 @@
 	}
 
 	svg {
-		width: 140px;
+		width: 180px;
 	}
+
+	#bg {
+		background: #fff;
+		canvas {
+			background: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	.home-title {
+		cursor: pointer;
+		@include transition(all 2s);
+
+		&:hover {
+			@include scale(1.1);
+
+			h1 {
+				@include scale(1.1);
+			}
+		}
+	}
+
 	.title {
 		h1 {
-			color: #fff;
+			color: #999;
+			font-size: 1.5em;
+			letter-spacing: 5px;
+			text-transform: uppercase;
+			margin-bottom: 0;
+			font-weight: 800;
+			@include transition(all 2s);
 		}
 		span {
 			display: block;
-			margin-top: 10px;
+			margin-top: 0px;
 			font-size: 1.2em;
+			color: #333;
+			font-weight: 800;
 		}
 	}
 }

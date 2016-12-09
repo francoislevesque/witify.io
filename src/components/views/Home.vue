@@ -1,29 +1,26 @@
 <template>
 	<div class="page home">
 		<v-fullpage class="v-center t-center">
-			<div id="vector">
-	            <canvas id="vectors"></canvas>
-	        </div>
+			<div id="bg"></div>
 			<div class="section">
 				<div class="container container-sm">
-					<v-scroll animation="fade">
-						<div class="title">
+					<router-link :to="'/' + $route.params.lang + '/projects'">
+					<div v-on:mouseover="onProjectLink = true" v-on:mouseout="onProjectLink = false" class="home-title">
+						<v-scroll animation="fade">
 							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 420.5 360.2" style="enable-background:new 0 0 420.5 360.2;" xml:space="preserve" width="200">
-								<path fill="#fff" d="M152.9,360.2L0,0h152.4l57.8,136.2L268.1,0h37.7l-76.7,180.7l38.5,90.7L382.8,0h37.7L267.6,360.2l-57.4-135.2L152.9,360.2z
+								<path fill="#333333" d="M152.9,360.2L0,0h152.4l57.8,136.2L268.1,0h37.7l-76.7,180.7l38.5,90.7L382.8,0h37.7L267.6,360.2l-57.4-135.2L152.9,360.2z
 								 M52.4,34.7l100.5,236.7l38.5-90.7l-61.9-146H52.4z"/>
 							</svg><br>
+						</v-scroll>
+						<v-scroll animation="fade">
+						<div class="title">
+							<h1>Witify Studio</h1>
+							<span>{{ $t('home.subtitle') }}</span>
 						</div>
-					</v-scroll>
-					<v-scroll animation="fade">
-					<div class="title">
-						<h1>Witify</h1>
-						<span>{{ $t('about.subtitle') }}</span>
+						</v-scroll>
 					</div>
-					</v-scroll>
-					<v-scroll animation="slideUp" delay="100">
-					<router-link :to="'/' + $route.params.lang + '/projects'" exact class="btn btn-black">{{ $t("nav.projects") }}</router-link>
-					</v-scroll>
+					</router-link>
 				</div>
 			</div>
 		</v-fullpage>
@@ -32,204 +29,139 @@
 
 <script>
 
-import { TweenLite, Circ } from 'gsap'
+import * as THREE from 'three'
+import SpriteCanvasMaterial from '../../renderers/CanvasRenderer.js'
+import Projector from '../../renderers/Projector.js'
 
 export default {
+	data() {
+		return {
+			onProjectLink: false,
+			separation: 100,
+			scale: 1,
+			speed: 1,
+			animationFrameId: 0
+		}
+	},
 	mounted() {
+		console.log('in');
 		var vm = this;
+		var AMOUNTX = 70, AMOUNTY = 20;
+			var container;
+			var camera, scene, renderer;
+			var particles, particle, count = 0;
+			var mouseX = 0, mouseY = 0;
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+			init();
+			animate();
+			function init() {
+				container = document.getElementById('bg');
+				camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 3000;
+				scene = new THREE.Scene();
+				particles = new Array();
+				var PI2 = Math.PI * 2;
+				var material = new THREE.SpriteCanvasMaterial( {
+					color: 0xd6d6d6,
+					program: function ( context ) {
+						context.beginPath();
+						context.arc( 0, 0, 0.5, 0, PI2, true );
+						context.fill();
+					}
+				} );
+				var i = 0;
+				for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+					for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+						var separation = vm.separation + Math.random()*10;
+						particle = particles[ i ++ ] = new THREE.Sprite( material );
+						particle.position.x = ix * separation - ( ( AMOUNTX * separation ) / 2 );
+						particle.position.z = iy * separation - ( ( AMOUNTY * separation ) / 2 );
+						scene.add( particle );
+					}
+				}
+				renderer = new THREE.CanvasRenderer();
+				renderer.setClearColor( 0xffffff );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
 
-	    var largeHeader, canvas, ctx, points, target, animateHeader = true;
-
-	    var nConnections = 2;
-	    var tweenFrequency = 5;
-	    var tweenAmplitude = 20;
-	    var circleColor = 'rgba(255,255,255,0.005)';
-	    var nPoints = 25;
-
-	    if(vm.$store.state.width < 900) {
-	        nPoints = 10;
-	        tweenFrequency = 1;
-	        tweenAmplitude = 10;
-	    }
-
-	    // Main
-	    initHeader();
-	    initAnimation();
-	    addListeners();
-
-	    function initHeader() {
-	        target = {x: vm.$store.state.width/2, y: vm.$store.state.height/2};
-
-	        largeHeader = document.getElementById('vector');
-	        largeHeader.style.height = vm.$store.state.height+'px';
-
-	        canvas = document.getElementById('vectors');
-	        canvas.width = vm.$store.state.width;
-	        canvas.height = vm.$store.state.height;
-	        ctx = canvas.getContext('2d');
-
-	        // create points
-	        points = [];
-	        for(var x = 0; x < vm.$store.state.width; x = x + vm.$store.state.width/nPoints) {
-	            for(var y = 0; y < vm.$store.state.height; y = y + vm.$store.state.height/nPoints) {
-	                var px = x + Math.random()*vm.$store.state.width/nPoints;
-	                var py = y + Math.random()*vm.$store.state.height/nPoints;
-	                var p = {x: px, originX: px, y: py, originY: py };
-	                points.push(p);
-	            }
-	        }
-
-	        // for each point find the 3 closest points
-	        for(var i = 0; i < points.length; i++) {
-	            var closest = [];
-	            var p1 = points[i];
-	            for(var j = 0; j < points.length; j++) {
-	                var p2 = points[j]
-	                if(!(p1 == p2)) {
-	                    var placed = false;
-	                    for(var k = 0; k < nConnections; k++) {
-	                        if(!placed) {
-	                            if(closest[k] == undefined) {
-	                                closest[k] = p2;
-	                                placed = true;
-	                            }
-	                        }
-	                    }
-
-	                    for(var k = 0; k < nConnections; k++) {
-	                        if(!placed) {
-	                            if(getDistance(p1, p2) < getDistance(p1, closest[k])) {
-	                                closest[k] = p2;
-	                                placed = true;
-	                            }
-	                        }
-	                    }
-	                }
-	            }
-	            p1.closest = closest;
-	        }
-
-	        // assign a circle to each point
-	        for(var i in points) {
-	            var c = new Circle(points[i], 2+Math.random()*2, circleColor);
-	            points[i].circle = c;
-	        }
-	    }
-
-	    // Event handling
-	    function addListeners() {
-	        if(!('ontouchstart' in window)) {
-	            window.addEventListener('mousemove', mouseMove);
-	        }
-	        window.addEventListener('scroll', scrollCheck);
-	        window.addEventListener('resize', resize);
-	    }
-
-	    function mouseMove(e) {
-	        var posx = 0;
-	        var posy = 0;
-	        if (e.pageX || e.pageY) {
-	            posx = e.pageX;
-	            posy = e.pageY;
-	        }
-	        else if (e.clientX || e.clientY)    {
-	            posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-	            posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
-	        }
-	        target.x = posx;
-	        target.y = posy;
-	    }
-
-	    function scrollCheck() {
-	        if(document.body.scrollTop > vm.$store.state.height) animateHeader = false;
-	        else animateHeader = true;
-	    }
-
-	    function resize() {
-	        largeHeader.style.height = vm.$store.state.height+'px';
-	        canvas.width = vm.$store.state.width;
-	        canvas.height = vm.$store.state.height;
-	    }
-
-	    // animation
-	    function initAnimation() {
-	        animate();
-	        for(var i in points) {
-	            shiftPoint(points[i]);
-	        }
-	    }
-
-	    function animate() {
-	        if(animateHeader) {
-	            ctx.clearRect(0,0,vm.$store.state.width,vm.$store.state.height);
-	            for(var i in points) {
-	                // detect points in range
-	                if(Math.abs(getDistance(target, points[i])) < 5000) {
-	                    points[i].active = 0.2;
-	                    points[i].circle.active = 0.5;
-	                } else if(Math.abs(getDistance(target, points[i])) < 20000) {
-	                    points[i].active = 0.03;
-	                    points[i].circle.active = 0.3;
-	                } else if(Math.abs(getDistance(target, points[i])) < 400000) {
-	                    points[i].active = 0.02;
-	                    points[i].circle.active = 0.02;
-	                } else {
-	                    points[i].active = 0.02;
-	                    points[i].circle.active = 0.02;
-	                }
-
-	                drawLines(points[i]);
-	                points[i].circle.draw();
-	            }
-	        }
-	        requestAnimationFrame(animate);
-	    }
-
-	    // Move points
-	    function shiftPoint(p) {
-	        TweenLite.to(p, tweenFrequency+1*Math.random(), {x:p.originX+1+Math.random()*tweenAmplitude,
-	            y: p.originY-50+Math.random()*tweenAmplitude, ease:Circ.easeInOut,
-	            onComplete: function() {
-	                shiftPoint(p);
-	            }});
-	    }
-
-	    // Canvas manipulation
-	    function drawLines(p) {
-	        if(!p.active)
-	        	p.active = 0.005
-	        for(var i in p.closest) {
-	            ctx.beginPath();
-	            ctx.moveTo(p.x, p.y);
-	            ctx.lineTo(p.closest[i].x, p.closest[i].y);
-	            ctx.strokeStyle = 'rgba(255,255,255,' + p.active +')';
-	            ctx.stroke();
-	        }
-	    }
-
-	    function Circle(pos,rad,color) {
-	        var _this = this;
-
-	        // constructor
-	        (function() {
-	            _this.pos = pos || null;
-	            _this.radius = rad || null;
-	            _this.color = color || null;
-	        })();
-
-	        this.draw = function() {
-	            if(!_this.active) return;
-	            ctx.beginPath();
-	            ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-	            ctx.fillStyle = 'rgba(255,255,255,'+ _this.active+')';
-	            ctx.fill();
-	        };
-	    }
-
-	    // Util
-	    function getDistance(p1, p2) {
-	        return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
-	    }
+				container.appendChild( renderer.domElement );
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+				window.addEventListener( 'resize', onWindowResize, false );
+			}
+			function onWindowResize() {
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+			}
+			//
+			function onDocumentMouseMove( event ) {
+				mouseX = (event.clientX - windowHalfX ) / 1;
+				mouseY = (event.clientY - windowHalfY ) / 1;
+			}
+			function onDocumentTouchStart( event ) {
+				if ( event.touches.length === 1 ) {
+					event.preventDefault();
+					mouseX = (event.touches[ 0 ].pageX - windowHalfX ) / 1;
+					mouseY = (event.touches[ 0 ].pageY - windowHalfY ) / 1;
+				}
+			}
+			function onDocumentTouchMove( event ) {
+				if ( event.touches.length === 1 ) {
+					event.preventDefault();
+					mouseX = (event.touches[ 0 ].pageX - windowHalfX ) / 1;
+					mouseY = (event.touches[ 0 ].pageY - windowHalfY ) / 1;
+				}
+			}
+			function animate() {
+				vm.animationFrameId = requestAnimationFrame( animate );
+				render();
+			}
+			function render() {
+				camera.position.x += ( mouseX - camera.position.x ) * .01;
+				camera.position.y += ( - mouseY - camera.position.y ) * .01;
+				vm.scale += (vm.onHoverScale - vm.scale) * 0.02;
+				vm.speed += (vm.onHoverSpeed - vm.speed) * 0.02;
+				camera.lookAt( scene.position );
+				var i = 0;
+				for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+					for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+						particle = particles[ i++ ];
+						particle.position.y = ( Math.sin( ( ix + count ) * 0.3 ) * 200 * vm.scale) +
+							( Math.sin( ( iy + count ) * 0.5 ) * 100 );
+						particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 4 * vm.scale +
+							( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4 * vm.scale;
+					}
+				}
+				renderer.render(scene, camera);
+				count += (0.05 * vm.speed);
+			}
+	},
+	destroyed() {
+		console.log('out')
+		cancelAnimationFrame(this.animationFrameId);
+		/*document.removeEventListener( 'mousemove', onDocumentMouseMove, false );
+		document.removeEventListener( 'touchstart', onDocumentTouchStart, false );
+		document.removeEventListener( 'touchmove', onDocumentTouchMove, false );
+		window.removeEventListener( 'resize', onWindowResize, false );*/
+	},
+	computed: {
+		onHoverScale() {
+			if(this.onProjectLink)
+				return 1.5
+			else
+				return 1
+		},
+		onHoverSpeed() {
+			if(this.onProjectLink)
+				return 2.5
+			else
+				return 1
+		}
 	}
 }
 </script>
