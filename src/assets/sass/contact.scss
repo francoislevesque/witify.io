@@ -1,4 +1,19 @@
 .contact {
 	background-color: #fff;
 	position: absolute;
+	
+	.after-mail {
+		padding: 10px 15px;
+		border-radius: 5px;
+		display: block;
+		color: #fff;
+	}
+
+	.after-mail.success {
+		background-color: #50ac4b;
+	}
+
+	.after-mail.error {
+		background-color: #cf3333;
+	}
 }

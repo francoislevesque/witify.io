@@ -10296,7 +10296,7 @@ form .radio.active {
 }
 
 .project-carousel .project .bg {
-  opacity: 0.8;
+  opacity: 0.95;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -10374,7 +10374,7 @@ form .radio.active {
 }
 
 .project-carousel .project:hover .bg {
-  opacity: 0.7;
+  opacity: 0.8;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
@@ -10401,6 +10401,21 @@ form .radio.active {
 .contact {
   background-color: #fff;
   position: absolute;
+}
+
+.contact .after-mail {
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: block;
+  color: #fff;
+}
+
+.contact .after-mail.success {
+  background-color: #50ac4b;
+}
+
+.contact .after-mail.error {
+  background-color: #cf3333;
 }
 
 .project {
@@ -10606,18 +10621,75 @@ form .radio.active {
   }
 }
 
-.home .section {
+.home .fullpage {
+  overflow: hidden;
+  margin-top: 0px !important;
+}
+
+.home .fullpage .section {
   padding: 60px 0;
 }
 
-.home svg {
-  width: 140px;
+.home .fullpage svg {
+  width: 180px;
 }
 
-.home .title span {
+.home .fullpage #bg {
+  background: #fff;
+  pointer-events: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.home .fullpage .project-link {
   display: block;
-  margin-top: 10px;
+}
+
+.home .fullpage .home-title {
+  cursor: pointer;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  transition: all 2s;
+}
+
+.home .fullpage .home-title:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.home .fullpage .home-title:hover h1 {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.home .fullpage .title {
+  margin-bottom: 0;
+}
+
+.home .fullpage .title h1 {
+  color: #999;
+  font-size: 1.5em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-weight: 800;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  transition: all 2s;
+}
+
+.home .fullpage .title span {
+  display: block;
+  margin-top: 0px;
   font-size: 1.2em;
+  color: #333;
+  font-weight: 800;
 }
 
 .gallery .content {

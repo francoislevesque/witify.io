@@ -90,7 +90,11 @@ if (process.env.NODE_ENV === 'production') {
 					}
 				}
 			]
-		}
+		}/*
+		{
+			test: /.*\.(gif|png|jpe?g|svg)$/i,
+			loaders: 'file-loader'
+		}*/
 	);
 
 	// Exctract CSS (plugin)
