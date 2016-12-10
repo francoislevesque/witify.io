@@ -7,7 +7,67 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>https://witify.io/</loc>
+  <loc>https://witify.io/fr/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/fr/projects/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/fr/projects/occ/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/fr/projects/elium/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/fr/projects/save/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/fr/projects/coupsur/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/fr/about/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/fr/contact/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/en/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/en/projects/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/en/projects/occ/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/en/projects/elium/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/en/projects/save/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/en/projects/coupsur/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/en/about/</loc>
+  <lastmod>2016-12-09T22:11:48+00:00</lastmod>
+</url>
+<url>
+  <loc>https://witify.io/en/contact/</loc>
   <lastmod>2016-12-09T22:11:48+00:00</lastmod>
 </url>
 </urlset>
