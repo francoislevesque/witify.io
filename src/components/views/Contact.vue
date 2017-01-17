@@ -121,11 +121,11 @@ export default {
             this.error = false
             this.success = false
             
-            this.$http.post('https://api.mailgun.net/v3/sandboxdb694e2bfd8c42b8a87c4d56d4ce3e36.mailgun.org', {
+            this.$http.post('https://api.mailgun.net/v3/witify.io/messages', {
                 responseType: "json",
-                auth: {
-                    username: 'api',
-                    password: 'key-a2a5836cbd50de3b9723a41633b97294'
+                headers : {
+                    'content-type': 'application/x-www-form-urlencoded',
+                    'Authorization': 'Basic ' + btoa('api:key-a2a5836cbd50de3b9723a41633b97294')
                 },
                 message: {
                     from_email: vm.data.email,
