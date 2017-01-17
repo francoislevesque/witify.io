@@ -110,34 +110,17 @@ export default {
 	methods: {
         sendEmail() {
             var vm = this
-            var text =  "<h2>Nouveau lead sur witify.io</h2>" +
-                        "<p><strong>Nom: </strong>" + this.data.name + "</p>" +
-                        "<p><strong>Email: </strong>" + this.data.email + "</p>" +
-                        "<p><strong>Phone: </strong>" + this.data.phone + "</p>" +
-                        "<p><strong>Message: </strong></br>" + this.data.message + "</p>" +
-                        "<p><strong>Type: </strong>" + this.data.type + "</p>" +
-                        "<p><strong>Service: </strong>" + this.data.service + "</p>"
 
             this.error = false
             this.success = false
             
-            this.$http.post('https://api.mailgun.net/v3/witify.io/messages', {
-                responseType: "json",
-                headers : {
-                    'content-type': 'application/x-www-form-urlencoded',
-                    'Authorization': 'Basic ' + btoa('api:key-a2a5836cbd50de3b9723a41633b97294')
-                },
-                message: {
-                    from_email: vm.data.email,
-                    to: [{
-                        email: "info@witify.io",
-                        name: "Witify Inc",
-                        type: "to"
-                    }],
-                    autotext: "true",
-                    subject: "Nouveau lead sur witify.io",
-                    html: text
-                }
+            this.$http.post('//formspree.io/info@witify.io', {
+                name: vm.data.name,
+                email: vm.data.email,
+                phone: vm.data.phone,
+                message: vm.data.message,
+                type: vm.data.type,
+                service: vm.data.service,
             })
             .then((response) => {
                 this.success = true
