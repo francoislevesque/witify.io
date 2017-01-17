@@ -86,7 +86,7 @@ export default {
 			"email": "Courriel",
 			"phone": "Téléphone",
 			"success": "Votre message a été envoyé avec succès. Nous allons vous répondre aussi vite que possible.",
-			"error": "Veuillez réessayer plus tard. Vous pouvez nous rejoindre via 'francois@witify.io'"
+			"error": "Veuillez réessayer plus tard. Vous pouvez nous rejoindre via 'info@witify.io'"
 		},
 		"categories": {
 			"webapp": "Application Web"
@@ -195,7 +195,7 @@ export default {
 				"service": "Service",
 				"send": "Send",
 			},
-			"coordinates": "Coordonninates",
+			"coordinates": "Coordinates",
 			"address": "Adress",
 			"email": "Email",
 			"phone": "Phone",

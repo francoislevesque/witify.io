@@ -3,12 +3,12 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import VueI18n from 'vue-i18n'
-import VueResource from 'vue-resource'
+import axios from 'axios'
 
 /** Vue Plugins */
-Vue.use(VueRouter);
-Vue.use(VueI18n);
-Vue.use(VueResource);
+Vue.use(VueRouter)
+Vue.use(VueI18n)
+Vue.prototype.$http = axios
 
 /** Custom Plugins **/
 import router from './route/router'
@@ -30,6 +30,7 @@ import VScroll from './components/partials/Scroll.vue'
 import VFullpage from './components/partials/Fullpage.vue'
 Vue.component('v-scroll', VScroll)
 Vue.component('v-fullpage', VFullpage)
+
 
 require('./assets/sass/main.scss')
 

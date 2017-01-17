@@ -120,21 +120,26 @@ export default {
 
             this.error = false
             this.success = false
-
-            this.$http.post('https://mandrillapp.com/api/1.0/messages/send.json', {
-                "key": "yyRbndvUFNx5Uzy1Z9FHhA",
-                "message": {
-                    "from_email": vm.data.email,
-                    "to": [{
-                        "email": "info@witify.io",
-                        "name": "Witify Inc",
-                        "type": "to"
+            
+            this.$http.post('https://api.mailgun.net/v3/sandboxdb694e2bfd8c42b8a87c4d56d4ce3e36.mailgun.org', {
+                responseType: "json",
+                auth: {
+                    username: 'api',
+                    password: 'key-a2a5836cbd50de3b9723a41633b97294'
+                },
+                message: {
+                    from_email: vm.data.email,
+                    to: [{
+                        email: "info@witify.io",
+                        name: "Witify Inc",
+                        type: "to"
                     }],
-                    "autotext": "true",
-                    "subject": "Nouveau lead sur witify.io",
-                    "html": text
+                    autotext: "true",
+                    subject: "Nouveau lead sur witify.io",
+                    html: text
                 }
-            }).then((response) => {
+            })
+            .then((response) => {
                 this.success = true
                 this.data = {
                     name: '',
@@ -144,7 +149,8 @@ export default {
                     type: '',
                     service: '',
                 }
-            }, (response) => {
+            })
+            .catch((response) => {
                 this.error = true
             })
         },

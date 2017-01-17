@@ -131,7 +131,18 @@
 			}
 		}
 	}
-	
+
+	/** Lightbox */
+	.lightbox {
+		.container {
+			padding: 0;
+		}
+		.controls .prev, .controls .next {
+			bottom: 0;
+			top: initial;
+			background-color: #222;
+		}
+	}	
 }
 
 /* Extra Small Devices, Phones */ 

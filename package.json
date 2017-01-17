@@ -12,12 +12,12 @@
     "bootstrap-sass": "3.3.7",
     "three": "^0.82.1",
     "vue-i18n": "4.7.1",
-    "vue-resource": "1.0.3",
     "vue-router": "2.0.1",
     "vueify": "9.2.4",
     "vuex": "2.0.0"
   },
   "devDependencies": {
+    "axios": "^0.15.3",
     "babel-core": "6.18.2",
     "babel-loader": "6.2.7",
     "babel-polyfill": "6.16.0",
