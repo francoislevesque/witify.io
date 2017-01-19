@@ -23,7 +23,7 @@ export default {
 			"save": {
 				"title": "Solliciter le marché de la voiture électrique",
 				"subtitle": "Système de réservation de voiture électriques en ligne.",
-				"description": "<p>L'autopartage de voitures électriques est de plus en plus utlisé dans les villes. Cependant, sans système de gestion en place, l'autopartage devient difficile et peu efficace. SAVe est un projet pilote pour les municipalités désirant faire plus grande utilisation de leurs véhicules électriques.</p><p>BrioConcept nous a approché afin de créer une application web pour optimiser la réservation de voitures en ligne. Cette dernière permet aujourd’hui à des centaines d’utilisateurs par mois de réserver des voitures rapidement en ligne.</p>",
+				"description": "<p>L'autopartage de voitures électriques est de plus en plus utlisé dans les villes. Cependant, sans système de gestion en place, l'autopartage devient difficile et peu efficace. SAUVéR est un projet pilote pour les municipalités désirant faire plus grande utilisation de leurs véhicules électriques.</p><p>BrioConcept nous a approché afin de créer une application web pour optimiser la réservation de voitures en ligne. Cette dernière permet aujourd’hui à des centaines d’utilisateurs par mois de réserver des voitures rapidement en ligne.</p>",
 			},
 			"elium": {
 				"title": "Stimuler les ventes",
@@ -39,6 +39,11 @@ export default {
 				"title": "Encourager l'apprentissage",
 				"subtitle": "Plateforme d'apprentissage et de tutorat en ligne",
 				"description": "<p>Chez Witify, nous croyons que l’éducation devrait être accessible à tous. C’est pourquoi nous avons démarré une plateforme d’apprentissage en ligne en 2016.</p><p>Actuellement, cette plateforme permet aux étudiants collégiaux de compléter leurs cours en ligne à l’aide de vidéos explicatives de grande qualité ainsi qu’une foulée d’examens et exercices. Nous travaillons d’arrache-pied afin d’élargir le contenu offert sur la plateforme et de faciliter l’accès à l’information.</p>",
+			},
+			"jussaume": {
+				"title": "Créer une expérience",
+				"subtitle": "Découvertes digitales pour Mobilier Jussaume",
+				"description": "<p>Mobilier Jussaume fabrique et distribue des mobiliers sur mesure de très grande qualité pour les restaurants et les particuliers. Durant ces dernières années, ils se sont établis au Québec comme les maitres de la gestion l’inventaire et de la construction solide dans le domaine de la restauration.</p><p>Ils nous ont contacté afin de rafraîchir leur site web. Nous avons travaillé de près afin de faire passer leur message: sur-mesure et qualité.</p><p>Tout comme l’entreprise, Witify a développé un site web jeune, dynamique et innovant. De façon audacieuse, nous avons passé ce message en créant une expérience : immerger l’utilisateur dans l’univers du mobilier le laissant interagir avec les matériaux.</p>",
 			}
 		},
 		"about": {
@@ -89,7 +94,8 @@ export default {
 			"error": "Veuillez réessayer plus tard. Vous pouvez nous rejoindre via 'info@witify.io'"
 		},
 		"categories": {
-			"webapp": "Application Web"
+			"webapp": "Application Web",
+			"website": "Site Web",
 		},
 		"type": {
 			"web": "Web",
@@ -104,10 +110,12 @@ export default {
 		},
 		"deliverables": {
 			"webapp": "Application Web",
+			"website": "Site Web",
 			"branding": "Image de marque",
 			"ux": "Interface d'utilisateur",
 			"api": "API",
-			"embedded-system": "Système embarqué"
+			"embedded-system": "Système embarqué",
+			"3d": "Rendus 3D"
 		},
 		"footer": {
 			"proudly": "Site développé par Witify"
@@ -137,7 +145,7 @@ export default {
 			"save": {
 				"title": "Peddle the electric cars market",
 				"subtitle": "Online reservation system for electric cars.",
-				"description": "<p>Car sharing for electric vehicles is gaining more traction in cities. However, car sharing becomes difficult and inefficient without an existing management system. SAVe is a pilot project for municipalities desiring to optimize the usage of their eletric cars.</p><p>BrioConcept approached us to create a web application that would optimize the cars online bookings. The latter is currently offering hundreds of users per month the opportunity to easily and quickly book cars online.</p>",
+				"description": "<p>Car sharing for electric vehicles is gaining more traction in cities. However, car sharing becomes difficult and inefficient without an existing management system. SAUVéR is a pilot project for municipalities desiring to optimize the usage of their eletric cars.</p><p>BrioConcept approached us to create a web application that would optimize the cars online bookings. The latter is currently offering hundreds of users per month the opportunity to easily and quickly book cars online.</p>",
 			},
 			"elium": {
 				"title": "Stimulate the sales",
@@ -203,7 +211,8 @@ export default {
 			"error": "Please try again later. You may try to reach us via 'info@witify.io'"
 		},
 		"categories": {
-			"webapp": "Web Application"
+			"webapp": "Web Application",
+			"website": "Website",
 		},
 		"type": {
 			"web": "Web",
@@ -218,10 +227,12 @@ export default {
 		},
 		"deliverables": {
 			"webapp": "Web Application",
+			"webiste": "Website",
 			"branding": "Branding",
 			"ux": "User Interface",
 			"api": "API",
-			"embedded-system": "Embedded System"
+			"embedded-system": "Embedded System",
+			"3d": "3D rendering",
 		},
 		"footer": {
 			"proudly": "Website created by Witify"

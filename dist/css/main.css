@@ -10316,19 +10316,23 @@ form .radio.active {
 }
 
 .project-carousel .project .bg.elium {
-  background-image: url(/dist/20493c42d01e841b51fbf5a389c30db8.jpg);
+  background-image: url(/dist/93322c9dfba4e534d864ff4e1525da64.jpg);
 }
 
 .project-carousel .project .bg.occ {
-  background-image: url(/dist/5cd2700855b142aacb3b50b0149aaf02.jpg);
+  background-image: url(/dist/e196feb19332981dda0c24678313c41a.jpg);
 }
 
 .project-carousel .project .bg.save {
-  background-image: url(/dist/2a8c9f90e267ef8d07e641f656ad89ac.jpg);
+  background-image: url(/dist/4418c2a8e88611706364a2a584a49bb4.jpg);
 }
 
 .project-carousel .project .bg.coupsur {
-  background-image: url(/dist/f3928588aab4e979437e22c1fd86d0ed.jpg);
+  background-image: url(/dist/e6dfa4b75b58144abce73661133f4e14.jpg);
+}
+
+.project-carousel .project .bg.jussaume {
+  background-image: url(/dist/7968a9bc9ce53a7ee25dd906bfcae960.jpg);
 }
 
 .project-carousel .project .content {
@@ -10496,19 +10500,23 @@ form .radio.active {
 }
 
 .project .hero .bg.elium {
-  background-image: url(/dist/20493c42d01e841b51fbf5a389c30db8.jpg);
+  background-image: url(/dist/93322c9dfba4e534d864ff4e1525da64.jpg);
 }
 
 .project .hero .bg.occ {
-  background-image: url(/dist/5cd2700855b142aacb3b50b0149aaf02.jpg);
+  background-image: url(/dist/e196feb19332981dda0c24678313c41a.jpg);
 }
 
 .project .hero .bg.save {
-  background-image: url(/dist/2a8c9f90e267ef8d07e641f656ad89ac.jpg);
+  background-image: url(/dist/4418c2a8e88611706364a2a584a49bb4.jpg);
 }
 
 .project .hero .bg.coupsur {
-  background-image: url(/dist/f3928588aab4e979437e22c1fd86d0ed.jpg);
+  background-image: url(/dist/e6dfa4b75b58144abce73661133f4e14.jpg);
+}
+
+.project .hero .bg.jussaume {
+  background-image: url(/dist/7968a9bc9ce53a7ee25dd906bfcae960.jpg);
 }
 
 .project .hero .content {
