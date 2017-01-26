@@ -37,12 +37,12 @@ export default {
 		"name": "Mobilier Jussaume",
 		"url": "http://jussaume.ca",
 		"category": "website",
-		"client": "Baseballtown Inc",
+		"client": "Jussaume Entreprise Inc",
 		"dev_time": "1",
 		"deliverables": [
 			"website",
 			"branding",
-			"3d",
+			"render",
 		],
 		"technologies": [
 			"vue",
@@ -130,7 +130,6 @@ export default {
 			"nginx",
 		],
 		"gallery": {
-			"0": "logo.png",
 			"1": "page_1.png",
 			"2": "page_2.png",
 			"3": "page_3.png",

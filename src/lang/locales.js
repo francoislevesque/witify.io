@@ -115,7 +115,7 @@ export default {
 			"ux": "Interface d'utilisateur",
 			"api": "API",
 			"embedded-system": "Système embarqué",
-			"3d": "Rendus 3D"
+			"render": "Rendus 3D"
 		},
 		"footer": {
 			"proudly": "Site développé par Witify"
@@ -232,7 +232,7 @@ export default {
 			"ux": "User Interface",
 			"api": "API",
 			"embedded-system": "Embedded System",
-			"3d": "3D rendering",
+			"render": "3D rendering"
 		},
 		"footer": {
 			"proudly": "Website created by Witify"
