@@ -1,9 +1,15 @@
 .home .fullpage {
 	overflow: hidden;
 	margin-top: 0px !important;
-
-	canvas {
+	
+	#bg {
 		background-color: #ffffff;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
 	}
 
 	.section {
@@ -13,30 +19,20 @@
 	svg {
 		width: 180px;
 	}
-
-	#bg {
-		background: #fff;
-		pointer-events: none;
-		overflow: hidden;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
 	
 	.project-link {
 		display: block;
 	}
 
-	.home-title {
-		cursor: pointer;
-	}
-
 	.title {
-		margin-bottom: 0;
-		padding: 50px;	
+		margin-bottom: 20px;
 
 		svg {
 			width: 40px;
+		}
+
+		h1 {
+			margin-bottom: 0px;
 		}
 	}
 }

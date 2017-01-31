@@ -10643,8 +10643,14 @@ form .radio.active {
   margin-top: 0px !important;
 }
 
-.home .fullpage canvas {
+.home .fullpage #bg {
   background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .home .fullpage .section {
@@ -10655,30 +10661,20 @@ form .radio.active {
   width: 180px;
 }
 
-.home .fullpage #bg {
-  background: #fff;
-  pointer-events: none;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .home .fullpage .project-link {
   display: block;
 }
 
-.home .fullpage .home-title {
-  cursor: pointer;
-}
-
 .home .fullpage .title {
-  margin-bottom: 0;
-  padding: 50px;
+  margin-bottom: 20px;
 }
 
 .home .fullpage .title svg {
   width: 40px;
+}
+
+.home .fullpage .title h1 {
+  margin-bottom: 0px;
 }
 
 .gallery .content {
