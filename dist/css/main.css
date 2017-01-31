@@ -9863,8 +9863,8 @@ a:hover {
 }
 
 a.link {
-  font-weight: 600;
-  font-size: 1.2em;
+  font-weight: 400;
+  font-size: 1.3em;
   color: #333;
   display: inline-block;
 }
@@ -9897,7 +9897,7 @@ a.link:hover img {
 p,
 span {
   color: #999;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.1em;
 }
 
@@ -9920,12 +9920,13 @@ strong {
 .title h3,
 .title h4,
 .title h5 {
-  margin-bottom: 0;
+  line-height: 0.9em;
+  margin-bottom: 20px;
 }
 
 .title span {
   margin-top: 0;
-  font-size: 1.8em;
+  font-size: 1.3em;
 }
 
 .title.white span {
@@ -9934,20 +9935,24 @@ strong {
 
 h1 {
   font-size: 3em;
-  font-weight: 700;
+  font-weight: 300;
+  letter-spacing: 0.01em;
 }
 
 h2 {
   font-size: 2.2em;
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.7em;
+  font-weight: 400;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.3em;
+  font-weight: 200;
 }
 
 .slideLeft {
@@ -10316,7 +10321,7 @@ form .radio.active {
 }
 
 .project-carousel .project .bg.elium {
-  background-image: url(/dist/93322c9dfba4e534d864ff4e1525da64.jpg);
+  background-image: url(/dist/4f1cb3eca37ec67ca5cdfa577ca9a6be.jpg);
 }
 
 .project-carousel .project .bg.occ {
@@ -10324,7 +10329,7 @@ form .radio.active {
 }
 
 .project-carousel .project .bg.save {
-  background-image: url(/dist/4418c2a8e88611706364a2a584a49bb4.jpg);
+  background-image: url(/dist/16b740654049c180128eff0c5781fe24.jpg);
 }
 
 .project-carousel .project .bg.coupsur {
@@ -10332,7 +10337,7 @@ form .radio.active {
 }
 
 .project-carousel .project .bg.jussaume {
-  background-image: url(/dist/7968a9bc9ce53a7ee25dd906bfcae960.jpg);
+  background-image: url(/dist/8ff2ae074d41d5d6671dd28e8eed6c3d.jpg);
 }
 
 .project-carousel .project .content {
@@ -10500,7 +10505,7 @@ form .radio.active {
 }
 
 .project .hero .bg.elium {
-  background-image: url(/dist/93322c9dfba4e534d864ff4e1525da64.jpg);
+  background-image: url(/dist/4f1cb3eca37ec67ca5cdfa577ca9a6be.jpg);
 }
 
 .project .hero .bg.occ {
@@ -10508,7 +10513,7 @@ form .radio.active {
 }
 
 .project .hero .bg.save {
-  background-image: url(/dist/4418c2a8e88611706364a2a584a49bb4.jpg);
+  background-image: url(/dist/16b740654049c180128eff0c5781fe24.jpg);
 }
 
 .project .hero .bg.coupsur {
@@ -10516,7 +10521,7 @@ form .radio.active {
 }
 
 .project .hero .bg.jussaume {
-  background-image: url(/dist/7968a9bc9ce53a7ee25dd906bfcae960.jpg);
+  background-image: url(/dist/8ff2ae074d41d5d6671dd28e8eed6c3d.jpg);
 }
 
 .project .hero .content {
@@ -10638,6 +10643,10 @@ form .radio.active {
   margin-top: 0px !important;
 }
 
+.home .fullpage canvas {
+  background-color: #ffffff;
+}
+
 .home .fullpage .section {
   padding: 60px 0;
 }
@@ -10661,47 +10670,15 @@ form .radio.active {
 
 .home .fullpage .home-title {
   cursor: pointer;
-  -webkit-transition: all 2s;
-  -moz-transition: all 2s;
-  transition: all 2s;
-}
-
-.home .fullpage .home-title:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.home .fullpage .home-title:hover h1 {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 .home .fullpage .title {
   margin-bottom: 0;
+  padding: 50px;
 }
 
-.home .fullpage .title h1 {
-  color: #999;
-  font-size: 1.5em;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  font-weight: 800;
-  -webkit-transition: all 2s;
-  -moz-transition: all 2s;
-  transition: all 2s;
-}
-
-.home .fullpage .title span {
-  display: block;
-  margin-top: 0px;
-  font-size: 1.2em;
-  color: #333;
-  font-weight: 800;
+.home .fullpage .title svg {
+  width: 40px;
 }
 
 .gallery .content {

@@ -8,8 +8,8 @@ export default {
 			"contact": "Nous joindre",
 		},
 		"home": {
-			"title": "Witify",
-			"subtitle": "Artisans du web",
+			"title": "Artisans du web",
+			"subtitle": "Studio de développement web basé à Montréal",
 		},
 		"projects": {
 			"client": "Client",
@@ -130,8 +130,8 @@ export default {
 			"contact": "Contact us",
 		},
 		"home": {
-			"title": "Witify",
-			"subtitle": "Web artisans",
+			"title": "Web Artisans",
+			"subtitle": "Montreal based web development studio",
 		},
 		"projects": {
 			"client": "Customer",
