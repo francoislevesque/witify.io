@@ -31,6 +31,7 @@
 
 <script>
 
+import Store from '../../store.js';
 import TWEEN from 'tween.js';
 
 export default {
@@ -52,6 +53,9 @@ export default {
 		var nConnections = 5;
 		var tweenFrequency = 2000;
 		var tweenAmplitude = 20;
+		var nPoints = 20;
+		if(Store.state.width < 768) 
+			nPoints = 8;
 
 	    // Main
 	    initHeader();
@@ -70,7 +74,6 @@ export default {
 
 	        // create points
 	        points = [];
-	        var nPoints = 20;
 	        for(var x = 0; x < width; x = x + width / nPoints) {
 	            for(var y = 0; y < height; y = y + height / nPoints) {
 	                var px = x + Math.random() * width / nPoints;

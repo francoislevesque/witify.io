@@ -10961,6 +10961,7 @@ form .radio.active {
 
   .about .text-image .text {
     width: 100%;
+    padding: 0;
   }
 
   .about .text-image .image {
