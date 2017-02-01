@@ -46,7 +46,7 @@ export default {
 	mounted() {
 		var width, height, canvas, ctx, points, target;
 
-		var circleColor = "rgba(222,222,222,";
+		var circleColor = "rgba(180,180,180,";
 		var strokeColor = "rgba(222,222,222,";
 		
 		var nConnections = 5;
@@ -165,13 +165,13 @@ export default {
                     points[i].circle.active = 1;
                 } else if(Math.abs(getDistance(target, points[i])) < 20000) {
                     points[i].active = 0.2;
-                    points[i].circle.active = 0.2;
+                    points[i].circle.active = 0.9;
                 } else if(Math.abs(getDistance(target, points[i])) < 400000) {
                     points[i].active = 0.08;
-                    points[i].circle.active = 0.05;
+                    points[i].circle.active = 0.2;
                 } else {
                     points[i].active = 0.06;
-                    points[i].circle.active = 0.05;
+                    points[i].circle.active = 0.1;
                 }
 
                 drawLines(points[i]);

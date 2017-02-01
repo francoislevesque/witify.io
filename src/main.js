@@ -40,6 +40,32 @@ import App from './App.vue'
 // Show all routes
 // import routes from './route/list'
 
+
+/**
+ * Remove a DOM element
+ */
+Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+}
+
+/**
+ * Remove a DOM NodeList
+ */
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+}
+
+/**
+ * Remove main.css if in development mode
+ */
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+   document.getElementById('css-bundle').remove();
+}
+
 /** Main VueJs Instance */
 new Vue({
 	el: '#app',

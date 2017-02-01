@@ -145,14 +145,14 @@ export default {
 
 			// Project list
 			"save": {
-				"title": "Peddle the electric cars market",
+				"title": "Peddle the electric car market",
 				"subtitle": "Online reservation system for electric cars.",
 				"description": "<p>Car sharing for electric vehicles is gaining more traction in cities. However, car sharing becomes difficult and inefficient without an existing management system. SAUVéR is a pilot project for municipalities desiring to optimize the usage of their eletric cars.</p><p>BrioConcept approached us to create a web application that would optimize the cars online bookings. The latter is currently offering hundreds of users per month the opportunity to easily and quickly book cars online.</p>",
 			},
 			"jussaume": {
 				"title": "Create an experience",
 				"subtitle": "Digital discoveries for Mobilier Jussaume" ,
-				"description": "<p>Mobilier Jussaume manufactures and distributes custom furniture of the highest quality for restaurants and private individuals. In recent years, they have established themselves in Quebec as the masters of inventory management and solid construction in the restaurant industry.</p> <p> They contacted us to refresh their website. We have worked closely to deliver their message: tailor-made and quality.</p> <p> Just like the company, Witify has developed a young, dynamic and innovative website. Boldly, we passed this message by creating an experience: immersing the user in the world of furniture allowing him to interact with the materials. </p>",
+				"description": "<p>Mobilier Jussaume creates, develops and distributes custom furniture of the highest quality for restaurants and private individuals. In recent years, they have established themselves in Quebec as the masters of inventory management and solid construction in the restaurant industry.</p> <p> They contacted us to refresh their website. We have worked closely to deliver their message: tailor-made and quality.</p> <p> Just like the company, Witify has developed a young, dynamic and innovative website. Boldly, we passed this message by creating an experience: immersing the user in the world of furniture allowing him to interact with the materials. </p>",
 			},
 			"elium": {
 				"title": "Stimulate the sales",
@@ -172,7 +172,7 @@ export default {
 		},
 		"about": {
 			"title": "About Witify",
-			"subtitle": "We are a balanced, dynamic and bold team that manufactures high-quality digital products for the web.",
+			"subtitle": "We are a balanced, dynamic and bold team that creates and develops high-quality digital products for the web.",
 			"speed": {
 				"title": "Swiftness and flexiblity",
 				"subtitle": "The small size of our team promotes the fast and efficient design of small and medium-sized projects. It easily adapts to your unique processes and needs.",
@@ -234,7 +234,7 @@ export default {
 		},
 		"deliverables": {
 			"webapp": "Web Application",
-			"webiste": "Website",
+			"website": "Website",
 			"branding": "Branding",
 			"ux": "User Interface",
 			"api": "API",
