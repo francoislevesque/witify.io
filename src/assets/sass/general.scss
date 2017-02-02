@@ -44,9 +44,9 @@ body {
 .scroll_content {
 	overflow: auto;
 	height: 100%;
-	&::-webkit-scrollbar { 
+	/*&::-webkit-scrollbar { 
 	    display: none; 
-	}
+	}*/
 }
 
 .section {

@@ -15,18 +15,6 @@
 						</div>
 						<div class="container">
 							<div class="sub-section">
-								<v-scroll animation="slideRight">
-								<div class="container-sm">
-									<h2>{{ $t('about.speed.title') }}</h2>
-									<p>{{ $t('about.speed.subtitle') }}</p>
-									<div class="stat">
-										<span class="label">Temps de développement moyen</span>
-										<span class="info">Entre 3 et 8 semaines</span>
-									</div>
-								</div>
-								</v-scroll>
-							</div>
-							<div class="sub-section">
 								<div class="text-image">
 									<div class="text">
 										<v-scroll animation="slideUp">
@@ -40,6 +28,18 @@
 										</v-scroll>
 									</div>
 								</div>
+							</div>
+							<div class="sub-section">
+								<v-scroll animation="slideRight">
+								<div class="container-sm">
+									<h2>{{ $t('about.speed.title') }}</h2>
+									<p>{{ $t('about.speed.subtitle') }}</p>
+									<div class="stat">
+										<span class="label">Temps de développement moyen</span>
+										<span class="info">Entre 3 et 8 semaines</span>
+									</div>
+								</div>
+								</v-scroll>
 							</div>
 							<div class="sub-section">
 								<div class="text-image">

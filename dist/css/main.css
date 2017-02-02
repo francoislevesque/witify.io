@@ -9394,10 +9394,9 @@ body {
 .scroll_content {
   overflow: auto;
   height: 100%;
-}
-
-.scroll_content::-webkit-scrollbar {
-  display: none;
+  /*&::-webkit-scrollbar { 
+	    display: none; 
+	}*/
 }
 
 .section {
@@ -10827,11 +10826,12 @@ form .radio.active {
 
 /* Large Devices, Wide Screens */
 
-@media only screen and (max-width: 1365px) {
+@media only screen and (max-width: 1600px) {
   /** Portfolio Page */
 
   .project-carousel .project .content {
     padding: 20px;
+    bottom: 14%;
   }
 
   .project-carousel .project .content h2 {
