@@ -64,7 +64,7 @@ export default {
 			},
 			"marketing": {
 				"title": "Marketing",
-				"subtitle": "Nous comprenons qu'une entreprise forte se doit de véhiculer une image forte. Utilisant les outils les plus modernes et notre connaissance du marché, nous repoussons les limités de la créativité afin de concevoir votre identité qui marquera les esprits ou de promouvoir la forme par laquelle vous vous définissez déjà."
+				"subtitle": "Nous comprenons qu'une entreprise forte se doit de véhiculer une image forte. Utilisant les outils les plus modernes et notre connaissance du marché, nous repoussons les limites de la créativité afin de concevoir votre identité qui marquera les esprits ou de promouvoir la forme par laquelle vous vous définissez déjà."
 			},
 			"communication": {
 				"title": "Communication",
