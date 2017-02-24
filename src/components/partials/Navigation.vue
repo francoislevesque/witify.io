@@ -8,6 +8,7 @@
 			                <!-- Nav Links -->
 			                <li><router-link :to="'/' + $route.params.lang + '/projects'" exact>{{ $t("nav.projects") }}</router-link></li>
 			                <li><router-link :to="'/' + $route.params.lang + '/about'" exact>{{ $t("nav.about") }}</router-link></li>
+			                <li><router-link :to="'/' + $route.params.lang + '/careers'" exact>{{ $t("nav.career") }}</router-link></li>
 			                <li><router-link :to="'/' + $route.params.lang + '/contact'" exact>{{ $t("nav.contact") }}</router-link></li>
 							
 							<!-- Lang Links -->

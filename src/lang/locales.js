@@ -6,6 +6,8 @@ export default {
 			"projects": "Projets",
 			"about": "Agence",
 			"contact": "Nous joindre",
+			"career": "Carrière",
+			"careers": "Carrières",
 		},
 		"home": {
 			"title": "Artisans du web",
@@ -76,6 +78,10 @@ export default {
 				"link": "Nous contacter"
 			}
 		},
+		"careers": {
+			"title": "Carrières",
+			"subtitle": "Witify est à la recherche de talents!"
+		},
 		"contact": {
 			"title": "Nous joindre",
 			"form": {
@@ -128,6 +134,8 @@ export default {
 			"home": "Home",
 			"projects": "Projects",
 			"about": "Agency",
+			"career": "Career",
+			"careers": "Careers",
 			"contact": "Contact us",
 		},
 		"home": {
@@ -198,6 +206,10 @@ export default {
 				"subtitle": "We are real people here in Montreal ready to answer your questions and to help you.",
 				"link": "Contact us"
 			}
+		},
+		"careers": {
+			"title": "Careers",
+			"subtitle": "Witify is looking for talents!"
 		},
 		"contact": {
 			"title": "Contact Us",

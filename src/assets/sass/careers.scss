@@ -1,0 +1,41 @@
+.careers {
+	margin: 40px 0;
+	.career {
+		display: block;
+		padding: 30px 0;
+		border-bottom: 1px solid #e1e1e1;
+		@include transition(0.3s);
+
+		&:first-child {
+			border-top: 1px solid #e1e1e1;
+		}
+
+		.title {
+			color: #666;
+			display: block;
+			margin: 0;
+			@include transform(translateX(0));
+			@include transition(0.3s);
+		}
+
+		&:hover {
+			background-color: #f3f3f3;
+
+			.title {
+				@include transform(translateX(30px));
+			}
+		}
+	}
+}
+
+.career-page {
+	padding-top: 60px;
+
+	.section {
+		padding: 40px 0;
+	}
+
+	.sub-section {
+		padding: 20px 0;
+	}
+}
