@@ -10292,6 +10292,21 @@ form .radio.active {
   right: 0;
 }
 
+.project-carousel .left-area,
+.project-carousel .right-area {
+  width: 100px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.project-carousel .right-area {
+  right: 0;
+  left: initial;
+}
+
 .project-carousel .project {
   cursor: pointer;
   display: inline-block;

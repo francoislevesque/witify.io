@@ -54,6 +54,20 @@
 		right: 0;
 	}
 
+	.left-area, .right-area {
+		width: 100px;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+	}
+
+	.right-area {
+		right: 0;
+		left: initial;
+	}
+
 	.project {
 		cursor: pointer;
 		display: inline-block;

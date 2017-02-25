@@ -1,5 +1,5 @@
 <template>
-    <div id="page" class="page" @scroll="scroll()">
+    <div id="page" class="page" @scroll="scroll()" @mousemove="mouseMove">
         <div class="project-carousel">
             <v-fullpage>
                 <div id="projects" 
@@ -13,7 +13,7 @@
                         @click="goToProjectPage(index, key)"
                         :id="'project-' + key"
                         :style="{
-                            left: index * 33.333 + '%'
+                            left: (index * 33.333) + '%'
                         }"
                         >
                         <div class="bg" :class="key"></div>
@@ -32,6 +32,8 @@
                 <div class="right" @click="next()">
                     <img :src="require('../../assets/img/icons/right.svg')" alt="Right Button">
                 </div>
+                <div class="left-area" @click="previous()"></div>
+                <div class="right-area" @click="next()"></div>
             </v-fullpage>
         </div>
     </div>
@@ -41,6 +43,7 @@
 
 import Scroll from '../../events/scroll'
 import database from '../../database'
+import store from '../../store'
 
 export default {
     mounted() {
@@ -57,7 +60,10 @@ export default {
             firstSlide: 0,
             onLeave: 0,
             nProjects: Object.keys(database).length,
-            projects: database
+            projects: database,
+            cursorX: 0,
+            cursorY: 0,
+            padding: 0
         }
     },
     methods: {
@@ -76,6 +82,7 @@ export default {
                 }, time)
 
                 this.onLeave = 1
+                this.padding = 0;
                 
                 setTimeout(function() {
                     vm.changeRoute(project_name)
@@ -95,21 +102,37 @@ export default {
             })
         },
         next() {
+            this.padding = 0;
             if(this.firstSlide != this.nProjects - 3)
                 this.firstSlide = this.firstSlide + 1
         },
         previous() {
+            this.padding = 0;
             if(this.firstSlide != 0)
                 this.firstSlide = this.firstSlide - 1
         },
         translation() {
-            return - this.$store.state.width/3 * (this.firstSlide)
+            return - this.$store.state.width/3 * (this.firstSlide) + this.padding
         },
         projectWidth(project_id) {
             return this.$store.state.width/3
         },
         scroll() {
             Scroll(document.getElementById('page').scrollTop)
+        },
+        mouseMove(e) {
+            this.cursorX = e.clientX
+            this.cursorY = e.clientY
+            if(!this.onLeave) {
+                if(this.cursorX + 100 > store.state.width && this.firstSlide != this.nProjects - 3) {
+                    this.padding = -100;
+                } else if(this.cursorX - 100 < 0 && this.firstSlide != 0) {
+                    this.padding = 100;
+                } else {
+                    this.padding = 0;
+                }
+            }
+                
         },
     }
 }
