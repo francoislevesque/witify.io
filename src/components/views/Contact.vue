@@ -59,9 +59,10 @@
                         <div class="col-md-6 coordinates">
                             <h2>{{ $t("contact.coordinates") }}</h2>
                             <h3>{{ $t("contact.email") }}</h3>
-                            <span>info@witify.io</span>
+                            <span>hello@witify.io</span>
                             <h3>{{ $t("contact.phone") }}</h3>
                             <span>(438) 403-9972</span>
+                            <span>(514) 916-3026</span>
                             <h3>{{ $t("contact.address") }}</h3>
                             <span>333 Sherbrooke E, 705</span>
                             <span>Montréal (Québec) H2X 4E3</span>
@@ -114,7 +115,7 @@ export default {
             this.error = false
             this.success = false
             
-            this.$http.post('//formspree.io/info@witify.io', {
+            this.$http.post('//formspree.io/hello@witify.io', {
                 name: vm.data.name,
                 email: vm.data.email,
                 phone: vm.data.phone,

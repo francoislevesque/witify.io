@@ -24,6 +24,6 @@ export default {
 	 * @type {Object}
 	 */
 	emails: {
-		0: 'info@witify.io'
+		0: 'hello@witify.io'
 	}
 }

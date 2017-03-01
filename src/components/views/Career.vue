@@ -64,7 +64,7 @@
 						<div class="title">
 							<h2>Comment appliquer</h2>
 						</div>
-						<p>Présentez nous votre portfolio mis à jour et votre CV et envoyez-nous le tout à {{ config.emails[0] }}. À bientôt!</p>
+						<p>Présentez nous votre portfolio mis à jour et votre CV et envoyez-nous le tout à careers@witify.io. À bientôt!</p>
 					</div>
 				</div>
 				<div class="section"></div>
