@@ -89,6 +89,7 @@
 						<div class="backdrop"></div>
 						<div class="container" style="position: relative;">
 							<div class="title bm-no">
+								<span class="top">{{ $t('next-project') }}</span>
 								<h2>{{ $t('projects.' + nextProjectName + '.title') }}</h2>
 								<span>{{ $t('projects.' + nextProjectName + '.subtitle') }}</span>
 							</div>

@@ -9969,6 +9969,12 @@ strong {
   font-size: 1.3em;
 }
 
+.title span.top {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
 .title.white span {
   color: #fff !important;
 }

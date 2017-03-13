@@ -1,6 +1,7 @@
 export default {
 	"fr": {
 		"visit_website": "Visiter le site web",
+		"next-project": "Prochain projet",
 		"nav": {
 			"home": "Accueil",
 			"projects": "Projets",
@@ -130,6 +131,7 @@ export default {
 	},
 	"en": {
 		"visit_website": "Visit website",
+		"next-project": "Next project",
 		"nav": {
 			"home": "Home",
 			"projects": "Projects",
