@@ -29,7 +29,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="message" class="label-control">{{ $t('contact.form.message') }}*</label>
-                                        <textarea v-model="data.message" cols="30" rows="10" class="form-control" required ></textarea>
+                                        <textarea v-model="data.message" cols="30" rows="5" class="form-control" required ></textarea>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">

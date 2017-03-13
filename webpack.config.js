@@ -5,25 +5,25 @@ var BabelPolyFill = require("babel-polyfill")
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 var WebpackExport = {
-	entry: ['babel-polyfill', './src/main.js'],
+	entry: [
+		'babel-polyfill',
+		'./src/main.js'
+	],
 	output: {
 		path: path.resolve(__dirname, './dist'),
 		publicPath: '/dist/',
 		filename: 'build.js'
 	},
-	resolveLoader: {
-		root: path.join(__dirname, 'node_modules'),
-	},
 	module: {
 		loaders: [
 			{
 				test: /\.vue$/,
-				loader: 'vue'
+				loader: 'vue-loader'
 			},
 			{
 				test: /\.js$/,
-				loader: 'babel',
-				exclude: /node_modules/
+				loader: 'babel-loader',
+				exclude: /(node_modules|bower_components)/
 			},
 			{
 				test: /.(woff(2)?|eot|ttf)(\?[a-z0-9=\.]+)?$/, 
@@ -35,7 +35,7 @@ var WebpackExport = {
 	plugins: []
 }
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'development') {
 
 	WebpackExport.devtool = '#cheap-module-eval-source-map';
 
@@ -47,7 +47,7 @@ if (process.env.NODE_ENV !== 'production') {
 	WebpackExport.module.loaders.push(
 		{
 			test: /\.scss$/,
-			loader: 'style-loader!css!resolve-url!sass?sourceMap'
+			loader: 'style-loader!css-loader!resolve-url-loader!sass-loader?sourceMap'
 		},
 		{
 			test: /.*\.(gif|png|jpe?g|svg)$/i,
@@ -57,6 +57,43 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 if (process.env.NODE_ENV === 'production') {
+	// Webpack Image
+	WebpackExport.module.loaders.push(
+		{
+			test: /.*\.(gif|png|jpe?g|svg)$/i,
+			loaders: [
+				'file-loader?name=img/[sha512:hash:base64:7].[ext]',
+				{
+					loader: 'image-webpack-loader',
+					query: {
+						mozjpeg: {
+							quality: '60',
+							interlaced: false,
+							progressive: true,
+						},
+						pngquant: {
+							quality: '100',
+							speed: 4,
+							interlaced: false,
+						}
+					}
+				}
+			]
+		}
+	);
+}
+
+if (process.env.NODE_ENV === 'production_fast') {
+	// Webpack Image
+	WebpackExport.module.loaders.push(
+		{
+			test: /.*\.(gif|png|jpe?g|svg)$/i,
+			loaders: 'file-loader'
+		}
+	);
+}
+
+if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'production_fast') {
 
 	WebpackExport.devtool = '#cheap-module-source-map'
 
@@ -64,36 +101,7 @@ if (process.env.NODE_ENV === 'production') {
 	WebpackExport.module.loaders.push(
 		{
 			test: /\.scss$/,
-			loader: ExtractTextPlugin.extract('css!resolve-url!sass?sourceMap')
-		}
-	);
-
-	// Webpack Image
-	WebpackExport.module.loaders.push(
-		/*{
-			test: /.*\.(gif|png|jpe?g|svg)$/i,
-			loaders: [
-				'file-loader?name=img/[sha512:hash:base64:7].[ext]',
-				{
-					loader: 'image-webpack',
-					query: {
-						progressive: true,
-						optimizationLevel: 7,
-						interlaced: false,
-						mozjpeg: {
-							quality: '60',
-						},
-						pngquant: {
-							quality: '65',
-							speed: 4
-						}
-					}
-				}
-			]
-		}*/
-		{
-			test: /.*\.(gif|png|jpe?g|svg)$/i,
-			loaders: 'file-loader'
+			loader: ExtractTextPlugin.extract('css-loader!resolve-url-loader!sass-loader?sourceMap')
 		}
 	);
 
@@ -132,6 +140,5 @@ if (process.env.NODE_ENV === 'production') {
 		)
 	);
 }
-
 
 module.exports = WebpackExport;

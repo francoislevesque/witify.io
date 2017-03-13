@@ -14,9 +14,9 @@
 
 	&:hover, &:focus, &:active {
 		@include box-shadow(none);
-		background-color: #666;
+		background-color: #555;
 		color: #fff;
-		border-color: #666;
+		border-color: #555;
 	}
 
 	&.btn-icon:before {
@@ -29,8 +29,8 @@
 		background-color: #fff;
 
 		&:hover, &:focus, &:active {
-			border-color: #666;
-			background-color: #666;
+			border-color: #555;
+			background-color: #555;
 		}
 	}
 
@@ -40,8 +40,8 @@
 		color: #fff;
 
 		&:hover, &:focus, &:active {
-			background-color: #666;
-			border-color: #666;
+			background-color: #555;
+			border-color: #555;
 		}
 	}
 

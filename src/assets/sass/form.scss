@@ -1,18 +1,21 @@
 form {
 	.label-control {
 		color: #333;
-		font-size: 0.9em;
+		font-size: 1em;
 		font-weight: 500;
 	}
 
 	.form-control {
 		@include box-shadow(none);
 		height: 40px;
-		border: #d1d1d1 2px solid;
+		border: none;
+		border-bottom: #d1d1d1 2px solid;
+		border-radius: 0;
+		padding: 10px 0;
 
 		&:active, &:focus {
 			@include box-shadow(none);
-			border: #999 2px solid;
+			border-bottom: #333 2px solid;
 		}
 	}
 
@@ -54,13 +57,15 @@ form {
 		display: block;
 		padding: 10px 20px;
 		cursor: pointer;
-		border: 2px solid #d1d1d1;
 		border-radius: 4px;
 		margin-bottom: 18px;
+		background-color: #f1f1f1;
+		border: 2px solid #f1f1f1;
 		@include transition(all 0.3s);
 
 		&.active {
-			border: 2px solid #333;
+			background-color: #e1e1e1;
+			border-color: #999;
 		}
 	}
 }

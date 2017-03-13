@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700);
 
-$mainFont: 'Maison Neue', 'helvetica neue', 'arial', sans-serif;
+$mainFont: 'helvetica neue', 'arial', sans-serif;
 
 body {
 	font-family: $mainFont;
@@ -60,7 +60,9 @@ strong {
 .title {
 	h1, h2, h3, h4, h5 {
 		line-height: 0.9em;
-		margin-bottom: 20px;
+		margin: 0;
+		margin-bottom: 10px;
+		font-weight: 600;
 	}
 	span {
 		margin-top: 0;
@@ -75,23 +77,19 @@ strong {
 
 h1 {
 	font-size: 3em;
-	font-weight: 300;
 	letter-spacing: 0.01em;
 }
 
 h2 {
 	font-size: 2.2em;
-	font-weight: 400;
 	letter-spacing: 0.01em;
 }
 
 h3 {
 	font-size: 1.7em;
-	font-weight: 400;
 }
 
 h4 {
 	font-size: 1.3em;
-	font-weight: 200;
 }
 

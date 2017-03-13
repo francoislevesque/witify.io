@@ -85,6 +85,15 @@
 							</div>
 						</div>
 					</div>
+					<div v-if="nextProjectName !== undefined" @click="toNextProject()" class="next-project" :class="nextProjectName">
+						<div class="backdrop"></div>
+						<div class="container" style="position: relative;">
+							<div class="title bm-no">
+								<h2>{{ $t('projects.' + nextProjectName + '.title') }}</h2>
+								<span>{{ $t('projects.' + nextProjectName + '.subtitle') }}</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</v-fullpage>
 		</div>
@@ -95,6 +104,7 @@
 <script>
 	import database from '../../database'
 	import Scroll from '../../events/scroll'
+	import BeforeReady from '../../events/beforeReady'
 	import Gallery from '../partials/Gallery.vue'
 	import Velocity from 'velocity-animate'
 
@@ -107,7 +117,9 @@
 				scrollPosition: 0,
 				name: this.$route.params.project,
 				project: database[this.$route.params.project],
-				currentOpacityValue: 1
+				currentOpacityValue: 1,
+				nextProjectName: this.findNextProjectName(),
+				nextProject: database[this.nextProjectName],
 			}
 		},
 		methods: {
@@ -117,13 +129,29 @@
 			scrollTopDescription() {
 				Velocity(document.getElementById('project-description'), "scroll", {offset: '1px', easing: "easeOutQuint", duration: "600", container: document.getElementById('scroll_content')});
 			},
-			bgOpacity() {/*
-				var newOpacityValue = 1 - (this.$store.state.scrollTop / this.$store.state.height)
-				if(Math.abs(this.currentOpacityValue - newOpacityValue) > 0.2)
-					return newOpacityValue
-				else
-					return this.currentOpacityValue*/
-				return 1
+			findNextProjectName() {
+				for (let i = 0; i < Object.keys(database).length; i++) {
+					if (Object.keys(database)[i] == this.$route.params.project) {
+						return Object.keys(database)[i + 1]
+					}
+				}
+
+				return null
+			},
+			toNextProject() {
+				this.$router.push({ name: 'project', params: { lang: this.$route.params.lang, project: this.nextProjectName }})
+			}
+		},
+		watch: {
+			$route () {
+				document.getElementById('scroll_content').scrollTop = 0
+				window.scrollTo(0,0)
+				this.name = null
+				this.project = null
+				this.name = this.$route.params.project
+				this.project = database[this.$route.params.project]
+				this.nextProjectName = this.findNextProjectName()
+				this.nextProject = database[this.nextProjectName]
 			}
 		}
 	}

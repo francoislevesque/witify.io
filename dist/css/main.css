@@ -9245,39 +9245,39 @@ button.close {
 }
 
 .bm-no {
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 .bm-xs {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 }
 
 .bm-sm {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 
 .bm-md {
-  margin-bottom: 50px;
+  margin-bottom: 50px !important;
 }
 
 .bm-lg {
-  margin-bottom: 60px;
+  margin-bottom: 60px !important;
 }
 
 .tm-no {
-  margin-top: 0px;
+  margin-top: 0px !important;
 }
 
 .tm-xs {
-  margin-top: 10px;
+  margin-top: 10px !important;
 }
 
 .tm-sm {
-  margin-top: 20px;
+  margin-top: 20px !important;
 }
 
 .tm-md {
-  margin-top: 30px;
+  margin-top: 30px !important;
 }
 
 .tm-lg {
@@ -9401,6 +9401,10 @@ body {
 
 .section {
   padding: 100px 0;
+  overflow-x: hidden;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 .section .sub-section {
@@ -9411,6 +9415,23 @@ body {
 
 .section .sub-section h2 {
   margin-bottom: 40px;
+}
+
+.section.dark {
+  background-color: #333;
+  color: #fff !important;
+}
+
+.section.hero {
+  padding: 120px 0;
+}
+
+.section.big {
+  padding: 200px 0;
+}
+
+.section.no-padding {
+  padding: 0;
 }
 
 /** Containers **/
@@ -9519,6 +9540,18 @@ body::-webkit-scrollbar {
 
 .coordinates span {
   display: block;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
 }
 
 nav.navigation {
@@ -9812,9 +9845,9 @@ footer .author {
 .btn:active {
   -webkit-box-shadow: none;
   box-shadow: none;
-  background-color: #666;
+  background-color: #555;
   color: #fff;
-  border-color: #666;
+  border-color: #555;
 }
 
 .btn.btn-icon:before {
@@ -9830,8 +9863,8 @@ footer .author {
 .btn.btn-primary:hover,
 .btn.btn-primary:focus,
 .btn.btn-primary:active {
-  border-color: #666;
-  background-color: #666;
+  border-color: #555;
+  background-color: #555;
 }
 
 .btn.btn-black {
@@ -9843,12 +9876,12 @@ footer .author {
 .btn.btn-black:hover,
 .btn.btn-black:focus,
 .btn.btn-black:active {
-  background-color: #666;
-  border-color: #666;
+  background-color: #555;
+  border-color: #555;
 }
 
 body {
-  font-family: "Maison Neue", "helvetica neue", "arial", sans-serif;
+  font-family: "helvetica neue", "arial", sans-serif;
   color: #333;
 }
 
@@ -9926,7 +9959,9 @@ strong {
 .title h4,
 .title h5 {
   line-height: 0.9em;
-  margin-bottom: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .title span {
@@ -9940,24 +9975,20 @@ strong {
 
 h1 {
   font-size: 3em;
-  font-weight: 300;
   letter-spacing: 0.01em;
 }
 
 h2 {
   font-size: 2.2em;
-  font-weight: 400;
   letter-spacing: 0.01em;
 }
 
 h3 {
   font-size: 1.7em;
-  font-weight: 400;
 }
 
 h4 {
   font-size: 1.3em;
-  font-weight: 200;
 }
 
 .slideLeft {
@@ -10153,7 +10184,7 @@ h4 {
 
 form .label-control {
   color: #333;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 500;
 }
 
@@ -10161,14 +10192,17 @@ form .form-control {
   -webkit-box-shadow: none;
   box-shadow: none;
   height: 40px;
-  border: #d1d1d1 2px solid;
+  border: none;
+  border-bottom: #d1d1d1 2px solid;
+  border-radius: 0;
+  padding: 10px 0;
 }
 
 form .form-control:active,
 form .form-control:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: #999 2px solid;
+  border-bottom: #333 2px solid;
 }
 
 form textarea.form-control {
@@ -10209,16 +10243,18 @@ form .radio {
   display: block;
   padding: 10px 20px;
   cursor: pointer;
-  border: 2px solid #d1d1d1;
   border-radius: 4px;
   margin-bottom: 18px;
+  background-color: #f1f1f1;
+  border: 2px solid #f1f1f1;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 form .radio.active {
-  border: 2px solid #333;
+  background-color: #e1e1e1;
+  border-color: #999;
 }
 
 .project-carousel {
@@ -10353,7 +10389,7 @@ form .radio.active {
 }
 
 .project-carousel .project .bg.coupsur {
-  background-image: url(/dist/e6dfa4b75b58144abce73661133f4e14.jpg);
+  background-image: url(/dist/75e87f97ff3ca3ea18c3e3df8b9c3969.jpg);
 }
 
 .project-carousel .project .bg.jussaume {
@@ -10494,10 +10530,6 @@ form .radio.active {
   padding-top: 60px;
 }
 
-.career-page .section {
-  padding: 40px 0;
-}
-
 .career-page .sub-section {
   padding: 20px 0;
 }
@@ -10592,7 +10624,7 @@ form .radio.active {
 }
 
 .project .hero .bg.coupsur {
-  background-image: url(/dist/e6dfa4b75b58144abce73661133f4e14.jpg);
+  background-image: url(/dist/75e87f97ff3ca3ea18c3e3df8b9c3969.jpg);
 }
 
 .project .hero .bg.jussaume {
@@ -10629,6 +10661,63 @@ form .radio.active {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.next-project {
+  padding: 100px 0;
+  position: relative;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  /** 
+ * Background Images for Projects
+ * MUST be in css file for Optimisation 
+ */
+}
+
+.next-project.elium {
+  background-image: url(/dist/4f1cb3eca37ec67ca5cdfa577ca9a6be.jpg);
+}
+
+.next-project.occ {
+  background-image: url(/dist/f9cc814e4fb5a40bc491f2161ccaccab.jpg);
+}
+
+.next-project.save {
+  background-image: url(/dist/16b740654049c180128eff0c5781fe24.jpg);
+}
+
+.next-project.coupsur {
+  background-image: url(/dist/75e87f97ff3ca3ea18c3e3df8b9c3969.jpg);
+}
+
+.next-project.jussaume {
+  background-image: url(/dist/8ff2ae074d41d5d6671dd28e8eed6c3d.jpg);
+}
+
+.next-project .title {
+  color: #fff;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.next-project:hover .title {
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  -o-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.next-project:hover .backdrop {
+  opacity: 0.9;
 }
 
 @-webkit-keyframes bounce {
@@ -10746,10 +10835,15 @@ form .radio.active {
 
 .home .fullpage .title svg {
   width: 40px;
+  margin-bottom: 10px;
 }
 
 .home .fullpage .title h1 {
-  margin-bottom: 0px;
+  font-size: 3em;
+}
+
+.home .fullpage .title span {
+  font-size: 1.6em;
 }
 
 .gallery .content {
@@ -11026,7 +11120,7 @@ form .radio.active {
 
   .section {
     padding-top: 40px;
-    padding-bottom: 65px;
+    padding-bottom: 40px;
   }
 
   .section .sub-section {

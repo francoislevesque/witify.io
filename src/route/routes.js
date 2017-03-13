@@ -36,14 +36,9 @@ export default [
 				component: Projects
 			},
 			{
+				name: 'project',
 				path: 'projects/:project',
-				component: Project,
-				children: [
-					{
-						name: 'project',
-						path: '',
-					}
-				]
+				component: Project
 			},
 			{
 				name: 'careers',

@@ -31,7 +31,7 @@ export default {
 			"elium": {
 				"title": "Stimuler les ventes",
 				"subtitle": "Application web de communication entre entreprise et consommateur",
-				"description": "Elium est une entreprise de marketing unique. Elle permet de créer un lien entre l’entreprise qui désire accroitre sa visibilité et les conducteurs prêts à afficher une publicité sur leur voiture. Witify a été approché pour la création de l’application web ainsi que l’image de marque de l’entreprise.",
+				"description": "<p>Elium est une entreprise de marketing unique. Elle permet de créer un lien entre l’entreprise qui désire accroitre sa visibilité et les conducteurs prêts à afficher une publicité sur leur voiture. Witify a été approché pour la création de l’application web ainsi que l’image de marque de l’entreprise.</p>",
 			},
 			"coupsur": {
 				"title": "Optimiser le service",
@@ -165,7 +165,7 @@ export default {
 			"elium": {
 				"title": "Stimulate the sales",
 				"subtitle": "Web application that facilitates the communication between businesses and consummers",
-				"description": "Elium is a business with a unique marketing approach. It allows the businesses desiring to increase their visibility to create a link with the drivers willing to advertise their car. Witify has been approached for the creation of its web application as well as the development of its corporate branding.",
+				"description": "<p>Elium is a business with a unique marketing approach. It allows the businesses desiring to increase their visibility to create a link with the drivers willing to advertise their car. Witify has been approached for the creation of its web application as well as the development of its corporate branding.</p>",
 			},
 			"coupsur": {
 				"title": "Optimize the service",

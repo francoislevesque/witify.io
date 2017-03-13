@@ -83,6 +83,32 @@
 	}
 }
 
+.next-project {
+	padding: 100px 0;
+	position: relative;
+	display: block;
+	background-size: cover;
+	background-position: center;
+	cursor: pointer;
+
+	@import 'bg';
+
+	.title {
+		color: #fff;
+		@include transition(0.3s);
+		@include transform(translateX(0)); 
+	}
+
+	&:hover {
+		.title {
+			@include transform(translateX(20px)); 
+		}
+		.backdrop {
+			opacity: 0.9;
+		}
+	}
+}
+
 @include keyframes(bounce) {
 	40% {
 		@include transform(translateY(0));
