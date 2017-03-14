@@ -27,7 +27,7 @@ export default {
 			"save": {
 				"title": "Solliciter le marché de la voiture électrique",
 				"subtitle": "Système de réservation de voiture électriques en ligne.",
-				"description": "<p>L'autopartage de voitures électriques est de plus en plus utlisé dans les villes. Cependant, sans système de gestion en place, l'autopartage devient difficile et peu efficace. SAUVéR est un projet pilote pour les municipalités désirant faire plus grande utilisation de leurs véhicules électriques.</p><p>BrioConcept nous a approché afin de créer une application web pour optimiser la réservation de voitures en ligne. Cette dernière permet aujourd’hui à des centaines d’utilisateurs par mois de réserver des voitures rapidement en ligne.</p>",
+				"description": "<p>L'autopartage de voitures électriques est de plus en plus populaire dans les municipalités. Cependant, sans système de gestion en place, l'autopartage devient difficile et peu efficace. SAUVéR est un projet pilote pour les municipalités désirant faire plus grande utilisation de leurs véhicules électriques.</p><p>BrioConcept nous a approché afin de créer une application web pour optimiser la réservation de voitures en ligne. Cette dernière permet aujourd’hui à des centaines d’utilisateurs par mois de réserver des voitures rapidement en ligne.</p>",
 			},
 			"elium": {
 				"title": "Stimuler les ventes",
