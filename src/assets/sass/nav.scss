@@ -28,6 +28,7 @@ nav.navigation {
 				img {
 					width: 40px;
 					margin: 0 auto;
+					opacity: 1;
 				}
 			}
 
@@ -56,6 +57,7 @@ nav.navigation {
 
 					.nest {
 						color: #999;
+						font-weight: 600;
 						font-size: 1em;
 					}
 				}
@@ -92,7 +94,7 @@ nav.navigation {
 					position: absolute;
 					height: 4px;
 					width: 100%;
-					background-color: $black;
+					background-color: #333;
 					border-radius: 1px;
 					opacity: 1;
 					left: 0;

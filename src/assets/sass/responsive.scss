@@ -6,7 +6,7 @@
 		bottom: 14%;
 		h2 {
 			font-size: 2em;
-		},
+		}
 		p, span {
 			font-size: 1.1em;
 		}
@@ -44,6 +44,13 @@
 	.technologies .tech {
 		width: 15%;
 		padding-right: 7%;
+	}
+
+	.clients {
+		.client {
+			width: 33%;
+			padding: 40px;
+		}
 	}
 
 	/** Portfolio Page */
@@ -149,6 +156,8 @@
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+
+	
 	
 	/** Text Size */
 	h1 {
@@ -224,6 +233,14 @@
 	/** Gallery */
 	.gallery .item .item-content img {
 		height: initial;
+	}
+
+	/** Clients **/
+	.clients {
+		.client {
+			width: 50%;
+			padding: 20px;
+		}
 	}
 }
 

@@ -14,6 +14,27 @@
 						</div>
 					</div>
 				</div>
+				<div class="section clients">
+					<div class="container">
+						<div>
+							<div class="client">
+								<img :src="require('../../assets/img/clients/jussaume.png')" alt="Mobilier Jussaume">
+							</div><!--
+							--><div class="client">
+								<img :src="require('../../assets/img/clients/poly.png')" alt="Polytechnique Montréal">
+							</div><!--
+							--><div class="client">
+								<img :src="require('../../assets/img/clients/mcc.png')" alt="Ministre de la culture">
+							</div><!--
+							--><div class="client">
+								<img :src="require('../../assets/img/clients/brio.png')" alt="Brioconcept Inc">
+							</div><!--
+							--><div class="client">
+								<img :src="require('../../assets/img/clients/bromont.png')" alt="Municipalité de Bromont">
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="section no-padding">
 					<div class="container">
 						<div class="sub-section">

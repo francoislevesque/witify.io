@@ -11,8 +11,8 @@ export default {
 			"careers": "Carrières",
 		},
 		"home": {
-			"title": "Artisans du web",
-			"subtitle": "Studio de développement web basé à Montréal",
+			"title": "Witify, artisans du web.",
+			"subtitle": "Nous sommes une équipe équilibrée, dynamique et audacieuse qui confectionne des produits digitaux d’une grande qualité pour le web.",
 			"btn": "Visiter nos récents projets",
 		},
 		"projects": {
@@ -24,6 +24,11 @@ export default {
 			"gallery": "Gallerie",
 
 			// Project list
+			"mcc": {
+				"title": "Faciliter l'accès aux données historiques",
+				"subtitle": "Portail web sémantique sur l'histoire du Québec",
+				"description": "<p>L'accès aux données historiques n'aura jamais été aussi facile. La plateforme sémantique est un projet pilote en partenariat avec Polytechnique Montréal qui vise à organiser et centraliser les données historiques du patrimoines québécois.</p><p>Witfy a été approché pour la construction d'une interface ludique permettant d'explorer ces données en toute liberté.</p>",
+			},
 			"save": {
 				"title": "Solliciter le marché de la voiture électrique",
 				"subtitle": "Système de réservation de voiture électriques en ligne.",
@@ -141,8 +146,8 @@ export default {
 			"contact": "Contact us",
 		},
 		"home": {
-			"title": "Web Artisans",
-			"subtitle": "Montreal based web development studio",
+			"title": "Witify, web artisans.",
+			"subtitle": "We are a balanced, dynamic and bold team that creates and develops high-quality digital products for the web.",
 			"btn": "Visit our recent projects",
 		},
 		"projects": {

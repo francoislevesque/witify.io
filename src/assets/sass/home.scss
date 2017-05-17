@@ -1,15 +1,27 @@
+@keyframes scaleInHome {
+  0% {
+    @include transform(scale(2));
+  }
+  100% {
+    @include transform(scale(1));
+  }
+}
+
 .home .fullpage {
 	overflow: hidden;
 	margin-top: 0px !important;
 	
 	#bg {
-		background-color: #ffffff;
+		background-image: url('../img/home/bg.jpg');
+		background-position: center;
+		background-size: cover;
 		height: 100%;
 		width: 100%;
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
+		@include animation(1s cubic-bezier(0.23, 1, 0.32, 1) 1 scaleInHome);
 	}
 
 	.section {
@@ -19,25 +31,33 @@
 	svg {
 		width: 180px;
 	}
-	
-	.project-link {
-		display: block;
-	}
 
 	.title {
 		margin-bottom: 20px;
 
 		svg {
 			width: 40px;
-			margin-bottom: 10px;
+			margin-bottom: 20px;
+
+			path {
+				fill: #fff;
+			}
 		}
 
 		h1 {
 			font-size: 3em;
+			color: #fff;
 		}
 
 		span {
-			font-size: 1.6em;
+			font-size: 1.2em;
+			color: #fff;
 		}
+	}
+
+	a.link {
+		color: #62b6ff;
+		font-weight: 600;
+		padding-left: 32px;
 	}
 }

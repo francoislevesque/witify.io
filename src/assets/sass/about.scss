@@ -1,0 +1,9 @@
+.clients {
+    background-color: $blue;
+    padding: 50px 0;
+    .client {
+        display: inline-block;
+        width: 20%;
+        padding-right: 70px;
+    }
+}
