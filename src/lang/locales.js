@@ -27,7 +27,7 @@ export default {
 			"mcc": {
 				"title": "Faciliter l'accès aux données historiques",
 				"subtitle": "Portail web sémantique sur l'histoire du Québec",
-				"description": "<p>L'accès aux données historiques n'aura jamais été aussi facile. La plateforme sémantique est un projet pilote en partenariat avec Polytechnique Montréal qui vise à organiser et centraliser les données historiques du patrimoines québécois.</p><p>Witfy a été approché pour la construction d'une interface ludique permettant d'explorer ces données en toute liberté.</p>",
+				"description": "<p>L'accès aux données historiques n'aura jamais été aussi facile. La plateforme sémantique est un projet pilote en partenariat avec Polytechnique Montréal qui vise à organiser et centraliser les données historiques du patrimoines québécois.</p><p>Witify a été approché pour la construction d'une interface ludique permettant d'explorer ces données en toute liberté.</p>",
 			},
 			"save": {
 				"title": "Solliciter le marché de la voiture électrique",
@@ -159,6 +159,11 @@ export default {
 			"gallery": "Gallery",
 
 			// Project list
+			"mcc": {
+				"title": "Facilitate access to historical data",
+				"subtitle": "Semantic web portal on the Quebec history" ,
+				"description": "<p>Access to historical data has never been easier. The semantic platform is a pilot project in partnership with Polytechnique Montréal, which aims to organize and centralize the historical data of Quebec's heritages.</p><p>Witify was approached for the construction of a playful interface allowing to explore this data in complete freedom.</p>",
+			},
 			"save": {
 				"title": "Peddle the electric car market",
 				"subtitle": "Online reservation system for electric cars.",
