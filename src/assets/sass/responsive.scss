@@ -1,5 +1,9 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1600px) {
+	.home canvas {
+		opacity: 0.3;
+	}
+
 	/** Portfolio Page */
 	.project-carousel .project .content {
 		padding: 20px;
@@ -7,14 +11,18 @@
 		h2 {
 			font-size: 2em;
 		}
-		p, span {
+		p {
 			font-size: 1.1em;
+		}
+		span {
+			font-size: 0.8em;
 		}
 	}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+
 	/** Navigation */
 	nav.navigation {
 		position: fixed;
@@ -83,11 +91,19 @@
 				.content {
 					position: initial;
 					padding: 80px 20px;
+
+					span {
+						font-size: 0.8em;
+					}
 				}
 			}
 		}
 		.left, .right {
 			display: none;
+		}
+		.left-area, .right-area {
+			display: none;
+			pointer-events: none;
 		}
 	}
 

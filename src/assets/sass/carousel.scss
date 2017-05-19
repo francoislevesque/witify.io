@@ -33,13 +33,17 @@
 	.left, .right {
 		position: fixed;
 		background-color: #fff;
-		padding: 20px;
+		text-align: center;
+		line-height: 3.3em;
 		cursor: pointer;
-		border-radius: 50px;
+		border-radius: 60px;
+		height: 55px;
+		width: 55px;
 		margin: 20px;
 		bottom: 10px;
 		@include box-shadow(0 0 8px rgba(0,0,0,0.1));
-		@include transition(transform 0.3s);
+		@include transition(transform 0.1s);
+		z-index: 10;
 		
 		&:hover {
 			@include scale(1.1);
@@ -48,10 +52,36 @@
 		img {
 			width: 20px;
 		}
+
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 55px;
+			display: block;
+			height: 100%;
+			width: 100%;
+			content: '';
+			@include transform(scale(1));
+			@include transition(0.3s);
+			border: 2px solid #fff;
+		}
+
+		&:hover {
+			&:after {
+				@include transform(scale(2));
+				opacity: 0;
+			}
+		}
+	}
+
+	.left {
+		padding-right: 4px;
 	}
 
 	.right {
 		right: 0;
+		padding-left: 4px;
 	}
 
 	.left-area, .right-area {
@@ -110,12 +140,17 @@
 			p {
 				opacity: 0;
 				color: #fff;
+				font-size: 1.1em;
+				font-weight: 400;
 				@include transform(translateY(5px));
 				@include transition(all 0.3s ease);
 			}
 
 			span {
 				color: #fff;
+				font-weight: 700;
+				font-size: 0.9em;
+				text-transform: uppercase;
 			}
 		}
 

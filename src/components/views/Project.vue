@@ -35,7 +35,7 @@
 											<div v-html="$t('projects.' + name + '.description')"></div>
 										</v-scroll>
 										<v-scroll animation="slideUp" delay="200">
-										<a :href="project.url" class="link tm-md">{{ $t('visit_website') }} <img :src="require('../../assets/img/icons/right-arrow.svg')" alt="Right arrow"></a>
+										<a :href="project.url" class="link tm-sm">{{ $t('visit_website') }} <img :src="require('../../assets/img/icons/right-arrow.svg')" alt="Right arrow"></a>
 										</v-scroll>
 									</div>
 								</div>
