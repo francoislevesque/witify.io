@@ -121,18 +121,19 @@ export default {
             Scroll(document.getElementById('page').scrollTop)
         },
         mouseMove(e) {
-            this.cursorX = e.clientX
-            this.cursorY = e.clientY
-            if(!this.onLeave) {
-                if(this.cursorX + 100 > store.state.width && this.firstSlide != this.nProjects - 3) {
-                    this.padding = -100;
-                } else if(this.cursorX - 100 < 0 && this.firstSlide != 0) {
-                    this.padding = 100;
-                } else {
-                    this.padding = 0;
+            if (this.$store.state.width > 992) {
+                this.cursorX = e.clientX
+                this.cursorY = e.clientY
+                if(!this.onLeave) {
+                    if(this.cursorX + 100 > store.state.width && this.firstSlide != this.nProjects - 3) {
+                        this.padding = -100;
+                    } else if(this.cursorX - 100 < 0 && this.firstSlide != 0) {
+                        this.padding = 100;
+                    } else {
+                        this.padding = 0;
+                    }
                 }
             }
-                
         },
     }
 }

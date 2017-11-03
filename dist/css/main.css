@@ -9947,9 +9947,9 @@ a:hover {
 }
 
 a.link {
-  font-weight: 400;
-  font-size: 1.3em;
-  color: #333;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #999;
   display: inline-block;
 }
 
@@ -10359,16 +10359,20 @@ form .radio.active {
 .project-carousel .right {
   position: fixed;
   background-color: #fff;
-  padding: 20px;
+  text-align: center;
+  line-height: 3.3em;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 60px;
+  height: 55px;
+  width: 55px;
   margin: 20px;
   bottom: 10px;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
-  transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 0.1s;
+  -moz-transition: -moz-transform 0.1s;
+  transition: transform 0.1s;
+  z-index: 10;
 }
 
 .project-carousel .left:hover,
@@ -10384,8 +10388,44 @@ form .radio.active {
   width: 20px;
 }
 
+.project-carousel .left:after,
+.project-carousel .right:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 55px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  content: '';
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  border: 2px solid #fff;
+}
+
+.project-carousel .left:hover:after,
+.project-carousel .right:hover:after {
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  opacity: 0;
+}
+
+.project-carousel .left {
+  padding-right: 4px;
+}
+
 .project-carousel .right {
   right: 0;
+  padding-left: 4px;
 }
 
 .project-carousel .left-area,
@@ -10488,6 +10528,8 @@ form .radio.active {
 .project-carousel .project .content p {
   opacity: 0;
   color: #fff;
+  font-size: 1.1em;
+  font-weight: 400;
   -webkit-transform: translateY(5px);
   -moz-transform: translateY(5px);
   -ms-transform: translateY(5px);
@@ -10500,6 +10542,9 @@ form .radio.active {
 
 .project-carousel .project .content span {
   color: #fff;
+  font-weight: 700;
+  font-size: 0.9em;
+  text-transform: uppercase;
 }
 
 .project-carousel .project:hover .bg {
@@ -10558,6 +10603,7 @@ form .radio.active {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .careers .career:first-child {
@@ -10579,7 +10625,7 @@ form .radio.active {
 }
 
 .careers .career:hover {
-  background-color: #f3f3f3;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .careers .career:hover .title {
@@ -10588,6 +10634,14 @@ form .radio.active {
   -ms-transform: translateX(30px);
   -o-transform: translateX(30px);
   transform: translateX(30px);
+}
+
+.careers-page {
+  margin-top: 50px;
+  background-image: url(/dist/7a9bfff26ca6cac874df6c9dafbd108b.jpg);
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
 }
 
 .career-page {
@@ -10895,6 +10949,7 @@ form .radio.active {
 .home .fullpage {
   overflow: hidden;
   margin-top: 0px !important;
+  background-color: #4B5B6A;
 }
 
 .home .fullpage #bg {
@@ -10949,12 +11004,22 @@ form .radio.active {
   padding-left: 32px;
 }
 
+.about p.main {
+  color: #fff;
+  font-weight: 500;
+}
+
+.about .big {
+  padding: 250px 0;
+}
+
 .clients {
-  background-color: #3395EA;
+  background-color: #dfe2e4;
   padding: 50px 0;
 }
 
 .clients .client {
+  opacity: 0.9;
   display: inline-block;
   width: 20%;
   padding-right: 70px;
@@ -11111,6 +11176,10 @@ form .radio.active {
 /* Large Devices, Wide Screens */
 
 @media only screen and (max-width: 1600px) {
+  .home canvas {
+    opacity: 0.3;
+  }
+
   /** Portfolio Page */
 
   .project-carousel .project .content {
@@ -11122,9 +11191,12 @@ form .radio.active {
     font-size: 2em;
   }
 
-  .project-carousel .project .content p,
-  .project-carousel .project .content span {
+  .project-carousel .project .content p {
     font-size: 1.1em;
+  }
+
+  .project-carousel .project .content span {
+    font-size: 0.8em;
   }
 }
 
@@ -11215,9 +11287,19 @@ form .radio.active {
     padding: 80px 20px;
   }
 
+  .project-carousel #projects .project .content span {
+    font-size: 0.8em;
+  }
+
   .project-carousel .left,
   .project-carousel .right {
     display: none;
+  }
+
+  .project-carousel .left-area,
+  .project-carousel .right-area {
+    display: none;
+    pointer-events: none;
   }
 
   /** Contact */

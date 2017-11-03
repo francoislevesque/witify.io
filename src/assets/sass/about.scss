@@ -1,7 +1,19 @@
+.about {
+    p.main {
+        color: #fff;
+        font-weight: 500;
+    }
+
+    .big {
+        padding: 250px 0;
+    }
+}
+
 .clients {
-    background-color: $blue;
+    background-color: #dfe2e4;
     padding: 50px 0;
     .client {
+        opacity: 0.9;
         display: inline-block;
         width: 20%;
         padding-right: 70px;

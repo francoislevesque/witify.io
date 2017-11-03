@@ -1,5 +1,5 @@
 <template>
-	<div class="page">
+	<div class="page careers-page">
 		<v-fullpage>
 			<div id="scroll_content" class="scroll_content" @scroll="scroll()">
 				<div class="section">
