@@ -8,6 +8,7 @@ export default {
 			"about": "Agence",
 			"contact": "Nous joindre",
 			"career": "Carrière",
+			"boursify": "Boursify",
 			"careers": "Carrières",
 		},
 		"home": {
@@ -150,6 +151,7 @@ export default {
 			"about": "Agency",
 			"career": "Career",
 			"careers": "Careers",
+			"boursify": "Boursify",
 			"contact": "Contact us",
 		},
 		"home": {

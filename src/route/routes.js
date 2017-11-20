@@ -5,6 +5,7 @@ import Home from '../components/views/Home.vue'
 import Projects from '../components/views/Projects.vue'
 import Project from '../components/views/Project.vue'
 import Careers from '../components/views/Careers.vue'
+import Boursify from '../components/views/Boursify.vue'
 import Career from '../components/views/Career.vue'
 import About from '../components/views/About.vue'
 import Contact from '../components/views/Contact.vue'
@@ -44,6 +45,11 @@ export default [
 				name: 'careers',
 				path: 'careers',
 				component: Careers
+			},
+			{
+				name: 'boursify',
+				path: 'boursify',
+				component: Boursify
 			},
 			{
 				path: 'career/:career', 
