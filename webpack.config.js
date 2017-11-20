@@ -128,7 +128,7 @@ if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'productio
 	WebpackExport.plugins.push(
 		new PrerenderSpaPlugin(
 			path.join(__dirname, ''),
-			['/fr', '/en', '/fr/projects', '/en/projects', '/fr/projects/mcc', '/en/projects/mcc', '/fr/projects/occ', '/en/projects/occ', '/fr/projects/save', '/en/projects/save', '/fr/projects/jussaume', '/en/projects/jussaume', '/fr/projects/coupsur', '/en/projects/coupsur', '/fr/projects/elium', '/en/projects/elium', '/fr/careers', '/en/careers', '/fr/about', '/en/about', '/fr/contact', '/en/contact'],
+			['/fr', '/en', '/fr/projects', '/en/projects', '/fr/boursify', '/en/boursify', '/fr/projects/mcc', '/en/projects/mcc', '/fr/projects/occ', '/en/projects/occ', '/fr/projects/save', '/en/projects/save', '/fr/projects/jussaume', '/en/projects/jussaume', '/fr/projects/coupsur', '/en/projects/coupsur', '/fr/projects/elium', '/en/projects/elium', '/fr/careers', '/en/careers', '/fr/about', '/en/about', '/fr/contact', '/en/contact'],
 			{
 				captureAfterElementExists: '#app',
 				maxAttempts: 10,
