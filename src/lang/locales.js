@@ -24,6 +24,11 @@ export default {
 			"gallery": "Gallerie",
 
 			// Project list
+			"pneus": {
+				"title": "Achats efficaces et agréables en ligne",
+				"subtitle": "Commerce en ligne pour la ventes de pneus",
+				"description": "<p></p>",
+			},
 			"mcc": {
 				"title": "Faciliter l'accès aux données historiques",
 				"subtitle": "Portail web sémantique sur l'histoire du Québec",
@@ -108,6 +113,7 @@ export default {
 		},
 		"categories": {
 			"webapp": "Application Web",
+			"ecommerce": "Commerce en ligne",
 			"website": "Site Web",
 		},
 		"type": {
@@ -123,6 +129,7 @@ export default {
 		},
 		"deliverables": {
 			"webapp": "Application Web",
+			"ecommerce": "Commerce en ligne",
 			"website": "Site Web",
 			"branding": "Image de marque",
 			"ux": "Interface d'utilisateur",
@@ -244,6 +251,7 @@ export default {
 		"categories": {
 			"webapp": "Web Application",
 			"website": "Website",
+			"ecommerce": "Online ecommerce",
 		},
 		"type": {
 			"web": "Web",
@@ -257,6 +265,7 @@ export default {
 			"update": "Help with an existing product",
 		},
 		"deliverables": {
+			"ecommerce": "Online ecommerce",
 			"webapp": "Web Application",
 			"website": "Website",
 			"branding": "Branding",
