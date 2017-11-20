@@ -21,7 +21,7 @@ export default {
 			"dev_time": "Temps",
 			"months": "mois",
 			"technologies": "Technologies utilisées",
-			"gallery": "Gallerie",
+			"gallery": "Galerie",
 
 			// Project list
 			"pneus": {
@@ -32,12 +32,12 @@ export default {
 			"mcc": {
 				"title": "Faciliter l'accès aux données historiques",
 				"subtitle": "Portail web sémantique sur l'histoire du Québec",
-				"description": "<p>L'accès aux données historiques n'aura jamais été aussi facile. La plateforme sémantique est un projet pilote en partenariat avec Polytechnique Montréal qui vise à organiser et centraliser les données historiques du patrimoines québécois.</p><p>Witify a été approché pour la construction d'une interface ludique permettant d'explorer ces données en toute liberté.</p>",
+				"description": "<p>L'accès aux données historiques n'aura jamais été aussi facile. La plateforme sémantique est un projet pilote en partenariat avec l'École Polytechnique de Montréal qui vise à organiser et à centraliser les données historiques du patrimoine québécois.</p><p>Witify a été approchée pour la construction d'une interface ludique permettant d'explorer ces données en toute liberté.</p>",
 			},
 			"save": {
 				"title": "Solliciter le marché de la voiture électrique",
 				"subtitle": "Système de réservation de voiture électriques en ligne.",
-				"description": "<p>L'autopartage de voitures électriques est de plus en plus populaire dans les municipalités. Cependant, sans système de gestion en place, l'autopartage devient difficile et peu efficace. SAUVéR est un projet pilote pour les municipalités désirant faire plus grande utilisation de leurs véhicules électriques.</p><p>BrioConcept nous a approché afin de créer une application web pour optimiser la réservation de voitures en ligne. Cette dernière permet aujourd’hui à des centaines d’utilisateurs par mois de réserver des voitures rapidement en ligne.</p>",
+				"description": "<p>L'autopartage de voitures électriques est de plus en plus populaire dans les municipalités. Cependant, sans système de gestion en place, l'autopartage devient difficile et peu efficace. SAUVéR est un projet pilote pour les municipalités désirant faire une plus grande utilisation de leurs véhicules électriques.</p><p>BrioConcept nous a approchée afin de créer une application web pour optimiser la réservation de voitures en ligne. Cette dernière permet aujourd’hui à des centaines d’utilisateurs par mois de réserver des voitures rapidement en ligne.</p>",
 			},
 			"elium": {
 				"title": "Stimuler les ventes",
@@ -57,7 +57,7 @@ export default {
 			"jussaume": {
 				"title": "Créer une expérience",
 				"subtitle": "Découvertes digitales pour Mobilier Jussaume",
-				"description": "<p>Mobilier Jussaume fabrique et distribue des mobiliers sur mesure de très grande qualité pour les restaurants et les particuliers. Durant ces dernières années, ils se sont établis au Québec comme les maitres de la gestion l’inventaire et de la construction solide dans le domaine de la restauration.</p><p>Ils nous ont contacté afin de rafraîchir leur site web. Nous avons travaillé de près afin de faire passer leur message: sur-mesure et qualité.</p><p>Tout comme l’entreprise, Witify a développé un site web jeune, dynamique et innovant. De façon audacieuse, nous avons passé ce message en créant une expérience : immerger l’utilisateur dans l’univers du mobilier le laissant interagir avec les matériaux.</p>",
+				"description": "<p>Mobilier Jussaume fabrique et distribue des mobiliers sur mesure de très grande qualité pour les restaurateurs et les particuliers. Au fil des dernières années, ils se sont établis au Québec comme les maitres de la gestion l’inventaire et de la construction durable en restauration.</p><p>Ils nous ont contactée afin de rafraîchir leur site web. Nous avons travaillé de près afin de faire passer leur message: sur-mesure et qualité.</p><p>Tout comme l’entreprise, Witify a développé un site web jeune, dynamique et innovant. De façon audacieuse, nous avons passé ce message en créant une expérience : immerger l’utilisateur dans l’univers du mobilier en le laissant interagir avec les matériaux.</p>",
 			}
 		},
 		"about": {
