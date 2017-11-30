@@ -78,11 +78,11 @@ export default {
 			},
 			"marketing": {
 				"title": "Marketing",
-				"subtitle": "Nous comprenons qu'une entreprise forte se doit de véhiculer une image forte. Utilisant les outils les plus modernes et notre connaissance du marché, nous repoussons les limites de la créativité afin de concevoir votre identité qui marquera les esprits ou de promouvoir la forme par laquelle vous vous définissez déjà."
+				"subtitle": "Nous comprenons qu'une entreprise forte se doit de véhiculer une image forte. En utilisant les outils les plus modernes et avec notre souci de bien connaître votre marché, nous repoussons les limites de la créativité afin de concevoir votre identité qui marquera les esprits, tout en respectant ce qui vous définit déjà."
 			},
 			"communication": {
 				"title": "Communication",
-				"subtitle": "Nous favorisons une communication constante avec nos clients lors du développement afin d’en optimiser sa rapidité. Vous pouvez visionner en temps réel la progression de votre projet avec « Cumulus Connect » - un logiciel maison créant un canal de communication efficace entre nos deux équipes."
+				"subtitle": "Nous priorisons une communication constante avec nos clients lors de la conception afin d’en optimiser sa rapidité. Vous pouvez visionner en temps réel la progression de votre projet avec « Cumulus Connect » - un logiciel maison créant un canal de communication efficace entre nos deux équipes."
 			},
 			"cta": {
 				"title": "Nous contacter?",

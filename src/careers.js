@@ -2,13 +2,13 @@ export default {
 	"design": {
 		"title": "Designer Graphique",
 		"subtitle": "Designer des applications utilisées par des milliers de personnes",
-		"opening": "Notre jeune start-up en pleine expansion est à la recherche d’un ou d’une designer motivée. Vous allez résoudre des problèmes, réaliser des maquettes graphiques, communiquer directement avec les clients et probablement partager une bière avec nous, le tout dans une bonne ambiance.",
+		"opening": "Notre jeune start-up en pleine expansion est à la recherche d’un ou d’une designer motivé(e). Vous allez résoudre des problèmes, réaliser des maquettes graphiques, communiquer directement avec les clients et probablement partager une bière avec nous, le tout dans une bonne ambiance.",
 		"content": {
 			"mission": [
 				"Design d’illustrations vectorielles",
-				"Appliquer les principes de conception orientée-utilisateur",
+				"Appliquer les principes d’une conception orientée-utilisateur",
 				"Participer dans le développement de l’expérience d’utilisateur",
-				"Définir des principes innovant d’organisation",
+				"Définir des principes innovants d’organisation",
 				"Créer des modèles conceptuels et des prototypes",
 				"Travailler en équipe",
 			],
@@ -26,23 +26,23 @@ export default {
 	"developper": {
 		"title": "Developpeur Web Full Stack",
 		"subtitle": "Concevoir des applications utilisées par des milliers de personnes",
-		"opening": "Notre jeune start-up en pleine expansion est à la recherche d’un ou d’une développeure motivée. Vous allez résoudre des problèmes, concevoir des produits logiciels, communiquer directement avec les clients et probablement partager une bière avec nous, le tout dans une bonne ambiance.",
+		"opening": "Notre jeune start-up en pleine expansion est à la recherche d’un ou d’une développeur(se) motivé(e). Vous allez résoudre des problèmes, concevoir des produits logiciels, communiquer directement avec les clients et probablement partager une bière avec nous, le tout dans une bonne ambiance.",
 		"content": {
 			"mission": [
 				"Implication complète et stimulante dans des projets web",
 				"Développement agile en petits groupes",
 				"Trouver des solutions élégantes à des problèmes complexes",
 				"Construire des applications de A à Z en quelques semaines",
-				"Avoir un soucis du détail"
+				"Avoir un souci du détail"
 			],
 			"skills": [
 				"Connaissances en PHP ou en Javascript",
-				"Connaissances en HTML et CSS",
+				"Connaissances en HTML et en CSS",
 				"Très bonne compréhension de la programmation orientée objet",
 				"Expérience dans le web",
 			],
 			"assets": [
-				"Connaitre le framework backend Laravel",
+				"Connaître le framework backend Laravel",
 				"Expérience avec le framework frontend VueJS",
 			]
 		}
