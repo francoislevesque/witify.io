@@ -53,7 +53,7 @@ export default {
 			"nginx",
 		],
 		"gallery": {
-			"1": "1.jpg",
+			/*"1": "1.jpg",
 			"2": "2.jpg",
 			"3": "3.jpg",
 			"4": "4.jpg",
@@ -61,7 +61,7 @@ export default {
 			"6": "6.jpg",
 			"7": "7.jpg",
 			"8": "8.jpg",
-			"9": "9.jpg",
+			"9": "9.jpg",*/
 		}
 	},
 	"jussaume": {
