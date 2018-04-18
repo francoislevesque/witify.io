@@ -61,7 +61,6 @@
                             <h3>{{ $t("contact.email") }}</h3>
                             <span>hello@witify.io</span>
                             <h3>{{ $t("contact.phone") }}</h3>
-                            <span>(438) 403-9972</span>
                             <span>(514) 916-3026</span>
                             <h3>{{ $t("contact.address") }}</h3>
                             <span>333 Sherbrooke E, 705</span>
